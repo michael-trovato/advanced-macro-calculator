@@ -62,7 +62,8 @@ A hard stop of 2 lbs per week has been implemented to prevent daily calories fro
 
 #### Weight Gain Per Week:
 
-A maximum gain of 1 lb per week is implemented. However, it is recommended to target 0.25 lbs per week to minimize fat gain.
+A maximum gain of 1 lb per week is implemented.
+However, it is recommended to target 0.25 lbs to 0.5 lbs per week to minimize fat gain.
 
 ### Warning:
 
