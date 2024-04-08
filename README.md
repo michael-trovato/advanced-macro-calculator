@@ -78,7 +78,7 @@ It is important to maintain essential fatty acid status to avoid deficiencies.
 
 ## Special Thanks:
 
-The following doctors have contributed greatly to my understanding of nutrition science.
+The following doctors have contributed greatly to my understanding of nutritional science.
 
 - Mike Israetel, PhD
 - Theodore (Ted) Naiman, MD
