@@ -68,7 +68,7 @@ However, it is recommended to target 0.25 lbs to 0.5 lbs per week to minimize fa
 To maintain proper health status, a minimum daily amount of fat must be consumed.
 
 Due to lack of scientific understanding,
-the best effort approach is made for determining fat grams with a safety factor.
+the best effort approach is made for determining fat grams with a safety factor (20%).
 
 It is important to maintain essential fatty acid status to avoid deficiencies.
 
