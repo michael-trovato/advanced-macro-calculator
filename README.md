@@ -52,19 +52,63 @@ Height: 5' 5"
 
 ## Safety:
 
-### Overrides:
-
 For practical purposes, certain hard stops have been implemented.
 
-#### Weight Loss Per Week:
+### Weight Loss Per Week:
 
 A hard stop of 2 lbs per week has been implemented to prevent daily calories from dropping too low.
 
-#### Weight Gain Per Week:
+### Weight Gain Per Week:
 
 A maximum gain of 1 lb per week is implemented.
 However, it is recommended to target 0.25 lbs to 0.5 lbs per week to minimize fat gain.
 
-### Warning:
+### Optimal Dietary Fat Intake:
 
-This tool should not be used for medical advice.
+To maintain proper health status, a minimum daily amount of fat must be consumed.
+
+Due to lack of scientific understanding,
+the best effort approach is made for determining fat grams with a safety factor.
+
+It is important to maintain essential fatty acid status to avoid deficiencies.
+
+#### Essential Fatty Acids:
+- [Optimal Omega 3 DHA & EPA (1.75 to 2.5 grams daily)](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
+- [Linoleic Acid (11 to 17 grams daily)](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+
+## Special Thanks:
+
+The following doctors have contributed greatly to my understanding of nutrition science.
+
+- Mike Israetel, PhD
+- Theodore (Ted) Naiman, MD
+- Layne Norton, PhD
+- Rhonda Patrick, PhD
+
+## Disclaimers:
+
+### Medical Disclaimer:
+
+The information provided by this calculator is for general informational purposes only.
+All information on the site is provided in good faith,
+however, we make no representation or warranty of any kind, express or implied, regarding the accuracy,
+adequacy, validity, reliability, availability, or completeness of any information on the site.
+
+Under no circumstance shall we have any liability to you for any loss or damage of any kind
+incurred as a result of the use of the site or reliance on any information provided on the site.
+Your use of the site and your reliance on any information on the site is solely at your own risk.
+
+This site cannot and does not contain medical/health advice.
+The medical/health information is provided for general informational and educational purposes
+only and is not a substitute for professional advice.
+Accordingly, before taking any actions based upon such information,
+we encourage you to consult with the appropriate professionals.
+The use of any information provided on this site is solely at your own risk.
+
+### Fitness Disclaimer:
+
+The site cannot and does not contain fitness advice.
+The fitness information is provided for general informational and educational purposes
+only and is not a substitute for professional advice.
+Before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.
+The use of any information provided on this site is solely at your own risk.
