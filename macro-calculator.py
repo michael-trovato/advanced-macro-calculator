@@ -103,9 +103,11 @@ while True:
         print()
         tdee = int(input('What is your Total Daily Energy Expenditure? '))
     except ValueError:
+        print()
         print('Error: Please enter a number.')
         continue
     if tdee < 0:
+        print()
         print('Error: Please enter a positive number.')
         continue
     break
@@ -117,9 +119,11 @@ while True:
         weight_input = input('What is your weight (units: lbs or kg)? ')
         weight, weight_units = parse_input(weight_input, available_units=['lbs', 'kg'])
     except ValueError:
+        print()
         print('Error: Please enter a number with lbs or kg as units.')
         continue
     if weight <= 0:
+        print()
         print('Error: Please enter a positive number.')
         continue
     break
@@ -127,11 +131,10 @@ while True:
 while True:
     print()
     bfp_known = input('Do you know your Body Fat Percentage (Y/N)? ').lower()
-    if bfp_known == 'y':
-        break
-    elif bfp_known == 'n':
+    if bfp_known in ['y', 'n']:
         break
     else:
+        print()
         print('Error: Please enter either Y or N.')
         continue
 
@@ -146,38 +149,43 @@ if bfp_known == 'y':
         try:
             body_fat_percentage = float(input('What is your body fat percentage? '))
         except ValueError:
+            print()
             print('Error: Please enter a number.')
             continue
         if body_fat_percentage <= 0:
+            print()
             print('Error: Please enter a positive number.')
+            continue
+        elif body_fat_percentage >= 100:
+            print()
+            print('Error: Body Fat Percentage must be between 0 and 100.')
             continue
         break
 
-# Get height if BFP isn't known
-elif bfp_known == 'n':
-    # Height
-    while True:
+# Height
+while True:
+    print()
+    try:
+        height_input = input('What is your height (units: inches or cm)? ')
+        height, height_units = parse_input(height_input, available_units=['inches', 'cm'])
+    except ValueError:
         print()
-        try:
-            height_input = input('What is your height (units: inches or cm)? ')
-            height, height_units = parse_input(height_input, available_units=['inches', 'cm'])
-        except ValueError:
-            print('Error: Please enter a number with inches or cm as units.')
-            continue
-        if height <= 0:
-            print('Error: Please enter a positive number.')
-            continue
-        break
+        print('Error: Please enter a number with inches or cm as units.')
+        continue
+    if height <= 0:
+        print()
+        print('Error: Please enter a positive number.')
+        continue
+    break
 
 # Sex
 while True:
     print()
     sex = input('What is your sex (M/F)? ').lower()
-    if sex == 'm':
-        break
-    elif sex == 'f':
+    if sex in ['m', 'f']:
         break
     else:
+        print()
         print('Error: Please enter either M or F.')
 
 # Age
@@ -186,10 +194,12 @@ while True:
     try:
         age = int(input('What is your age (years)? ').lower())
         if age < 17:
+            print()
             print('Error: The minimum age is 17 years old.')
             continue
         break
     except ValueError:
+        print()
         print('Error: Please enter a number.')
 
 while True:
@@ -204,6 +214,7 @@ while True:
     try:
         extra = int(input('> '))
     except ValueError:
+        print()
         print('Error: Please enter a number 1 through 6.')
         continue
     break
@@ -218,7 +229,7 @@ while True:
         change, change_units = parse_input(input('> '), available_units=['%', 'lbs', 'kg'])
     except ValueError:
         print()
-        print('Error: Please enter a number and units.')
+        print('Error: Please enter a number and units (%, lbs, kg).')
         continue
     break
 
