@@ -175,6 +175,17 @@ Benefits include:
 - Lower Risk of Certain Cancers
 - Improved Outcomes with Infectious Diseases
 
+### Lab Tests:
+
+These are generally recommended lab tests.
+
+- HbA1c
+- CBC
+- CMP
+- Fasting Lipids (9–12 Hours)
+- Thyroid
+- Testosterone
+
 ## Special Thanks:
 
 The following doctors have contributed greatly to my understanding of nutritional science.
