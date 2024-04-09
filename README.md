@@ -85,6 +85,96 @@ It is important to maintain essential fatty acid status to avoid deficiencies.
 - [Optimal Omega 3 DHA & EPA (1.75 to 2.5 grams daily)](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
 - [Linoleic Acid (11 to 17 grams daily)](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
 
+## Practical Application:
+
+### Food Sources:
+
+While trying to be diet agnostic, there are certain principles that would be generally accepted.
+
+- Prioritize protein consumption.
+- Muscle Protein Synthesis should be maximized.
+- Four meals per day (spaced evenly) will keep amino acids elevated in the blood stream throughout the day. However, two to four meals per day are practically acceptable.
+- The first and last meals of the day are the most important to consume enough amino acids to stop catabolism.
+- 40 to 50 grams of protein will optimally stimulate MPS.
+
+#### Weight Loss:
+
+If your goal is to lose weight, then it would be wise to eat foods that have a higher satiety per calorie.
+
+Fat would ideally come with the protein itself.
+
+Be sure to reach your protein and fat targets!
+
+##### Examples:
+- Lean Meats
+  - 93% Ground Beef
+  - Turkey Breast
+  - Wild Caught Salmon
+  - Sardines
+  - Chicken
+- Non-Fat Yogurt
+- Steamed Vegetables
+- Tubers
+- Fruits (Especially Berries)
+- Carbonated Water with Meals
+
+#### Weight Gain:
+
+Targeting a lower satiety per calorie will help you to consume more calories for weight gain.
+
+##### Examples:
+- Fattier Meats
+- Whole Fat Yogurt
+- Sauteed Vegetables
+- Grains
+
+### Waist to Height Ratio:
+
+One of the cheapest and yet powerful methods
+of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en.wikipedia.org/wiki/Waist-to-height_ratio).
+
+Measure your waist circumference around the naval, then divide that number by your height (in the same units).
+
+Your WHtR should be less than 0.5.
+
+#### Boundary Values:
+- 0.4 - 0.49: Healthy
+- 0.5 - 0.59: Increased Central Adiposity
+- 0.6+: High Central Adiposity
+
+#### Example:
+
+Height: 5' 10" (70 inches)
+
+Waist: 40 inches
+
+40 inches / 70 inches = 0.57 (Elevated Health Risk)
+
+### Exercise:
+
+#### Resistence Training:
+
+Each muscle group should be trained at least once per week to prevent muscle loss.
+
+To gain muscle, training each muscle group twice per week is generally recommended.
+
+Ideally, you would train each muscle group as soon as it is recovered to maximize hypertrophy.
+
+Ensure that adequate volume is reached when training each muscle group.
+This will depend on your muscle mass, recovery time, and experience.
+
+#### Cardiovascular Training:
+
+Not only great to increase total daily energy expenditure,
+cardio has been linked to [increased life space](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
+
+Benefits include:
+- Increased VO2 max
+- [Increased BDNF](https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health)
+- Lower Risk of Cardiovascular Disease
+- Lower Risk of Certain Cancers
+- Improved Outcomes with Infectious Diseases
+
 ## Special Thanks:
 
 The following doctors have contributed greatly to my understanding of nutritional science.
