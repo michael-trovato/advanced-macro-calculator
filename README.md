@@ -1,7 +1,7 @@
 # Advanced Macro Calculator
 This calculator helps you optimize your nutritional intake and weight management strategies.
 It is built on reliable scientific evidence and provides you with personalized advice based on your specific input.
-To use this calculator, you require the most recent version of [Python 3](https://www.python.org/downloads/).
+To use this calculator, any recent version of [Python 3](https://www.python.org/downloads/) should work.
 
 ### Prompts
 
