@@ -5,7 +5,8 @@ CALORIES_PER_G_CARB = 4
 CALORIES_PER_G_PROTEIN = 4
 CALORIES_PER_KG_BODY_FAT = 7700
 MAX_KG_LOSS_PER_WEEK = -0.907185
-MAX_KG_GAIN_PER_WEEK = 0.453592
+MAX_KG_GAIN_PER_WEEK = 0.907185  # 2 lbs
+MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
 MIN_FAT_G_LBM_KG = 0.75
 MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.2
@@ -38,6 +39,13 @@ def inches_to_cm(inches: float) -> float:
 
 def cm_to_meters(cms: float) -> float:
     return cms / 100
+
+
+def calculate_bmr(height, weight, age, sex):
+    if sex == 'm':
+        return int(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
+    elif sex == 'f':
+        return int(447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age))
 
 
 def calculate_bmi(height, weight):
@@ -219,10 +227,11 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
                      sex):
     lean_body_mass = None
 
-    # Convert to KG
+    # Convert to kg
     if weight_units == 'lbs':
         weight = lbs_to_kg(weight)
 
+    # Convert to cm
     if height_units == 'inches':
         height = inches_to_cm(height)
 
@@ -245,7 +254,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     elif change_units in ['lbs', 'kg']:
         weight_change = change
 
-    if weight_change < MAX_KG_LOSS_PER_WEEK:  # Max lost safety cap
+    if weight_change < MAX_KG_LOSS_PER_WEEK:  # Max loss safety cap
         weight_change = MAX_KG_LOSS_PER_WEEK
 
     elif weight_change > MAX_KG_GAIN_PER_WEEK:  # Max gain safety cap
@@ -253,6 +262,17 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
 
     daily_calorie_change = weight_change * CALORIES_PER_KG_BODY_FAT / 7
     daily_calories = int(tdee + daily_calorie_change)
+
+    bmr = calculate_bmr(height, weight, age, sex)
+    calories_lower_limit = bmr * (1 - MAX_PERCENTAGE_BELOW_BMR)
+
+    if daily_calories < calories_lower_limit:
+        daily_calories = calories_lower_limit
+
+    warn = False
+    if daily_calories < bmr:
+        warn = True
+
     extra_calories = daily_calories - protein_calories - fat_calories
     if extra_calories < 0:
         extra_calories = 0
@@ -314,10 +334,10 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         lean_body_mass = kg_to_lbs(lean_body_mass)
     lbm = {'weight': lean_body_mass, 'units': weight_units}
 
-    return macros, lbm, body_fat_percentage
+    return macros, lbm, body_fat_percentage, bmr, warn
 
 
-macros, lbm, bfp = calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage,
+macros, lbm, bfp, bmr, warn = calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage,
                                     height, height_units, sex)
 print()
 print(f"Protein: {macros['protein']['grams']}g ({macros['protein']['calories']} calories)")
@@ -332,3 +352,13 @@ print(f"Total Calories: {total_calories:,} kcal")
 print(f"Percentage Protein: {macros['protein']['calories'] / total_calories * 100:.2f}%")
 print(f"Lean Body Mass: {lbm['weight']:.0f} {lbm['units']}")
 print(f"Body Fat Percentage: {bfp:.2f}%")
+print(f"Basal Metabolic Rate: {bmr:,} kcal")
+
+if warn:
+    print()
+    print('*** Important Warning ***')
+    print(f'Your calculated daily calorie intake ({total_calories:,} kcal) is below your estimated basal metabolic rate (BMR) of {bmr:,} kcal.')
+    print('Consuming fewer calories than your BMR for an extended period can lead to potential health risks, including nutrient deficiencies and metabolic slowdown.')
+    print('Ensure your diet includes a variety of nutrient-dense foods to meet your vitamin, mineral, and overall nutritional needs.')
+    print('Additionally, consider consulting with a healthcare provider or dietitian before starting any calorie-restricted diet, especially one below your BMR.')
+    print('They may suggest a tailored multivitamin or specific supplements based on your individual health profile and dietary needs.')
