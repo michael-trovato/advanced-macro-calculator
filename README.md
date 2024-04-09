@@ -1,10 +1,7 @@
-# Simple Macro Calculator
-
-## How to Use
-
-### Running
-
-[Python 3](https://www.python.org/downloads/) is required to run this calculator. The most recent version is recommended.
+# Advanced Macro Calculator
+This calculator helps you optimize your nutritional intake and weight management strategies.
+It is built on reliable scientific evidence and provides you with personalized advice based on your specific input.
+To use this calculator, you require the most recent version of [Python 3](https://www.python.org/downloads/).
 
 ### Prompts
 
@@ -13,50 +10,57 @@ Please answer the prompts with the required information.
 The calculator fully supports imperial and metric units.
 
 Users can choose to lose or gain weight based on percentage of body weight or fixed values (lbs or kg).
+This is useful when wanting to lose as a percentage of body weight per week while in a fat loss phase,
+and gaining at a fixed value (lbs or kg) during a muscle gain phase.
 
-Useful when wanting to lose as a percentage of body weight per week while in a fat loss phase,
-and gaining at fixed values during a muscle gain phase.
+## Calculating Body Fat Percentage
+Your Body Fat Percentage plays a vital role in assessing your overall health status.
 
-If your body fat percentage isn't known,
-then an average ideal body weight based on height will be used to estimate lean body mass.
-
-If you have greater than average muscle mass for your weight and height, then it would be wise to find (DEXA, Bod Pod),
-and enter your body fat percentage.
+If you have greater than average muscle mass for your weight and height,
+then it would be wise to test your body fat percentage using an accurate method,
+such as [DEXA](https://health.ucdavis.edu/sports-medicine/resources/dxa-info#:~:text=The%20DXA%2C%20or%20%22Dual%20X,table%20that%20you%20lay%20on.),
+and entering your body fat percentage.
 
 An accurate body fat percentage will ensure a proper protein target per day as it is calculated based on lean body mass.
 
 The default protein target is set to 2.2 grams per kg of lean body mass.
 
-## Body Fat Percentage
+### Known Body Fat Percentage
+If you know your body fat percentage through reliable testing methods,
+this percentage should be used to calculate your lean body mass.
 
-### Known
+### Unknown Body Fat Percentage
+If your body fat percentage is unknown, a default estimate will be calculated.
+This calculation involves determining your Body Mass Index (BMI) using your weight and height.
+Following this, your body fat percentage is identified
+using the [Deurenberg formula](https://en.wikipedia.org/wiki/Body_fat_percentage#From_BMI).
+Finally, lean body mass is computed based on total body weight and the ascertained body fat percentage.
 
-If your body fat percentage is known through a reliable method of testing (DEXA, Bod Pod), then it will be used to calculate your lean body mass.
+#### Other Methods
 
-### Unknown
+##### Reference Photos
 
-If your body fat percentage is unknown, then an estimate will be calculated the following way. 
+You can find reference photos of individuals at different body fat percentages
+and choose the body fat percentage that is closest to you.
 
-First, your bmi is calculated with your weight and height.
+##### US Navy Body Fat Calculator
 
-Next, using the [Deurenberg formula](https://en.wikipedia.org/wiki/Body_fat_percentage#From_BMI), the body fat percentage is calculated.
+The [US Navy Body Fat Calculator](https://www.calculator.net/body-fat-calculator.html) is used by the US Navy
+to determine body fat percentage.
 
-Body Fat Percentage = (1.20 × BMI) + (0.23 × Age) − (10.8 × Sex) − 5.4
+Note that your neck circumference will have a large impact on the results.
 
-Lastly, lean body mass is calculated based on total body weight and the calculated body fat percentage.
-
-## Safety Measures for Weight Change
-For practical purposes,
-hard stops are implemented to dictate the pace of weight change
-and to ensure daily caloric intake does not drop too low.
+## Safety Thresholds for Weight Change
+Implementing hard stops ensures
+your health is not compromised due to excessively quick weight change or extremely low caloric intake. 
 
 ### Weight Loss Measures
-- A maximum weight loss limit of 2 lbs per week.
-- The lowest daily caloric intake is 20% below the Basal Metabolic Rate (BMR).
+- Maximum weekly weight loss: 2 lbs (0.907 kg)
+- Lowest daily caloric intake: 20% below the Basal Metabolic Rate (BMR)
 
 ### Weight Gain Measures
-- A maximum weight gain limit of 2 lbs per week.
-- The recommended target for weight gain is between 0.25 lbs (0.113 kg) to 0.5 lbs (0.226 kg) per week to minimize fat gain.
+- Maximum weekly weight gain: 2 lbs (0.907 kg)
+- Recommended weekly weight gain: Between 0.25 lbs (0.113 kg) and 0.5 lbs (0.226 kg) to minimize fat gain
 
 ### Optimal Dietary Fat Intake
 
@@ -186,31 +190,19 @@ The following doctors have contributed greatly to my understanding of nutritiona
 - Grams Protein per kg LBM = 2.2
 - Minimum Grams Fat per kg LBM = 0.75
 - Minimum Grams Fat Safety Factor = 0.2
+- Maximum Percentage Caloric Intake Below BMR = 0.2
 
 ## Disclaimers
+This calculator is designed to provide general guidance and informational content only.
+It is not a substitute for professional medical advice or for the care
+that patients receive from their healthcare professionals. 
 
 ### Medical Disclaimer
-
-The information provided by this calculator is for general informational purposes only.
-All information on the site is provided in good faith,
-however, we make no representation or warranty of any kind, express or implied, regarding the accuracy,
-adequacy, validity, reliability, availability, or completeness of any information on the site.
-
-Under no circumstance shall we have any liability to you for any loss or damage of any kind
-incurred as a result of the use of the site or reliance on any information provided on the site.
-Your use of the site and your reliance on any information on the site is solely at your own risk.
-
-This site cannot and does not contain medical/health advice.
-The medical/health information is provided for general informational and educational purposes
-only and is not a substitute for professional advice.
-Accordingly, before taking any actions based upon such information,
-we encourage you to consult with the appropriate professionals.
-The use of any information provided on this site is solely at your own risk.
+Please consult with healthcare professionals for advice
+pertaining to your individual health conditions and requirements.
+Reliance on any information provided by this calculator is solely at your own risk.
 
 ### Fitness Disclaimer
-
-The site cannot and does not contain fitness advice.
-The fitness information is provided for general informational and educational purposes
-only and is not a substitute for professional advice.
-Before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.
-The use of any information provided on this site is solely at your own risk.
+The health and fitness advice provided is for general informational and educational purposes only.
+It is not a substitute for professional advice,
+and we strongly encourage you to consult with fitness professionals before implementing any fitness program.
