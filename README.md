@@ -188,10 +188,10 @@ The following doctors have contributed greatly to my understanding of nutritiona
 
 ## Constants
 
-- Grams Protein per kg LBM = 2.2
-- Minimum Grams Fat per kg LBM = 0.75
-- Minimum Grams Fat Safety Factor = 0.2
-- Maximum Percentage Caloric Intake Below BMR = 0.2
+- Protein Intake: 2.2 g/kg LBM
+- Minimum Fat Grams: 0.75 g/kg LBM
+- Minimum Fat Grams Safety Factor: 20%
+- Maximum Caloric Deficit Below BMR: 20%
 
 ## Disclaimers
 This calculator is designed to provide general guidance and informational content only.
