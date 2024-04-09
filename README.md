@@ -9,6 +9,14 @@
 ### Prompts:
 
 Please answer the prompts with the required information.
+
+The calculator fully supports imperial and metric units.
+
+Users can choose to lose or gain weight based on percentage of body weight or fixed values (lbs or kg).
+
+Useful when wanting to lose as a percentage of body weight per week while in a fat loss phase,
+and gaining at fixed values during a muscle gain phase.
+
 If your body fat percentage isn't known,
 then an average ideal body weight based on height will be used to estimate lean body mass.
 
