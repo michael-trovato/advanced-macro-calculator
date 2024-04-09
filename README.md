@@ -1,12 +1,12 @@
 # Simple Macro Calculator
 
-## How to Use:
+## How to Use
 
-### Running:
+### Running
 
 [Python 3](https://www.python.org/downloads/) is required to run this calculator. The most recent version is recommended.
 
-### Prompts:
+### Prompts
 
 Please answer the prompts with the required information.
 
@@ -27,13 +27,13 @@ An accurate body fat percentage will ensure a proper protein target per day as i
 
 The default protein target is set to 2.2 grams per kg of lean body mass.
 
-## Body Fat Percentage:
+## Body Fat Percentage
 
-### Known:
+### Known
 
 If your body fat percentage is known through a reliable method of testing (DEXA, Bod Pod), then it will be used to calculate your lean body mass.
 
-### Unknown:
+### Unknown
 
 If your body fat percentage is unknown, then an estimate will be calculated the following way. 
 
@@ -45,20 +45,20 @@ Body Fat Percentage = (1.20 × BMI) + (0.23 × Age) − (10.8 × Sex) − 5.4
 
 Lastly, lean body mass is calculated based on total body weight and the calculated body fat percentage.
 
-## Safety:
+## Safety Measures for Weight Change
+For practical purposes,
+hard stops are implemented to dictate the pace of weight change
+and to ensure daily caloric intake does not drop too low.
 
-For practical purposes, certain hard stops have been implemented.
+### Weight Loss Measures
+- A maximum weight loss limit of 2 lbs per week.
+- The lowest daily caloric intake is 20% below the Basal Metabolic Rate (BMR).
 
-### Weight Loss Per Week:
+### Weight Gain Measures
+- A maximum weight gain limit of 2 lbs per week.
+- The recommended target for weight gain is between 0.25 lbs (0.113 kg) to 0.5 lbs (0.226 kg) per week to minimize fat gain.
 
-A hard stop of 2 lbs per week has been implemented to prevent daily calories from dropping too low.
-
-### Weight Gain Per Week:
-
-A maximum gain of 1 lb per week is implemented.
-However, it is recommended to target 0.25 lbs to 0.5 lbs per week to minimize fat gain.
-
-### Optimal Dietary Fat Intake:
+### Optimal Dietary Fat Intake
 
 To maintain proper health status, a minimum daily amount of fat must be consumed.
 
@@ -67,13 +67,13 @@ the best effort approach is made for determining fat grams with a safety factor 
 
 It is important to maintain essential fatty acid status to avoid deficiencies.
 
-#### Essential Fatty Acids:
+#### Essential Fatty Acids
 - [Optimal Omega 3 DHA & EPA (1.75 to 2.5 grams daily)](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
 - [Linoleic Acid (11 to 17 grams daily)](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
 
-## Practical Application:
+## Practical Application
 
-### Food Sources:
+### General Principles
 
 While trying to be diet agnostic, there are certain principles that would be generally accepted.
 
@@ -83,7 +83,7 @@ While trying to be diet agnostic, there are certain principles that would be gen
 - The first and last meals of the day are important to consume enough amino acids to stop catabolism, but getting enough proteins after resistence training is imperative.
 - [40 to 50 grams](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893) of protein will optimally stimulate MPS. (Work in Progress)
 
-#### Weight Loss:
+#### Weight Loss
 
 If your goal is to lose weight, then it would be wise to eat foods that have a higher satiety per calorie.
 
@@ -91,7 +91,7 @@ Fat would ideally come with the protein itself.
 
 Be sure to reach your protein and fat targets!
 
-##### Examples:
+##### Examples
 - Lean Meats
   - 93% Ground Beef
   - Turkey Breast
@@ -104,17 +104,17 @@ Be sure to reach your protein and fat targets!
 - Fruits (Especially Berries)
 - Carbonated Water with Meals
 
-#### Weight Gain:
+#### Weight Gain
 
 Targeting a lower satiety per calorie will help you to consume more calories for weight gain.
 
-##### Examples:
+##### Examples
 - Fattier Meats
 - Whole Fat Yogurt
 - Sauteed Vegetables
-- Grains
+- Whole Grains
 
-### Waist to Height Ratio:
+### Waist to Height Ratio
 
 One of the cheapest and yet powerful methods
 of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en.wikipedia.org/wiki/Waist-to-height_ratio).
@@ -123,12 +123,12 @@ Measure your waist circumference around the naval, then divide that number by yo
 
 Your WHtR should be less than 0.5.
 
-#### Boundary Values:
+#### Boundary Values
 - 0.4 - 0.49: Healthy
 - 0.5 - 0.59: Increased Central Adiposity
 - 0.6+: High Central Adiposity
 
-#### Example:
+#### Example
 
 Height: 5' 10" (70 inches)
 
@@ -136,9 +136,9 @@ Waist: 40 inches
 
 40 inches / 70 inches = 0.57 (Elevated Health Risk)
 
-### Exercise:
+### Exercise
 
-#### Resistence Training:
+#### Resistence Training
 
 Each muscle group should be trained at least once per week to prevent muscle loss.
 
@@ -149,7 +149,7 @@ Ideally, you would train each muscle group as soon as it is recovered to maximiz
 Ensure that adequate volume is reached when training each muscle group.
 This will depend on your muscle mass, recovery time, and experience.
 
-#### Cardiovascular Training:
+#### Cardiovascular Training
 
 Not only great to increase total daily energy expenditure,
 cardio has been linked to [increased life span](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
@@ -161,7 +161,7 @@ Benefits include:
 - Lower Risk of Certain Cancers
 - Improved Outcomes with Infectious Diseases
 
-### Lab Tests:
+### Lab Tests
 
 These are generally recommended lab tests.
 
@@ -172,7 +172,7 @@ These are generally recommended lab tests.
 - Thyroid
 - Testosterone
 
-## Special Thanks:
+## Special Thanks
 
 The following doctors have contributed greatly to my understanding of nutritional science.
 
@@ -181,15 +181,15 @@ The following doctors have contributed greatly to my understanding of nutritiona
 - Layne Norton, PhD
 - Rhonda Patrick, PhD
 
-## Constants:
+## Constants
 
 - Grams Protein per kg LBM = 2.2
 - Minimum Grams Fat per kg LBM = 0.75
 - Minimum Grams Fat Safety Factor = 0.2
 
-## Disclaimers:
+## Disclaimers
 
-### Medical Disclaimer:
+### Medical Disclaimer
 
 The information provided by this calculator is for general informational purposes only.
 All information on the site is provided in good faith,
@@ -207,7 +207,7 @@ Accordingly, before taking any actions based upon such information,
 we encourage you to consult with the appropriate professionals.
 The use of any information provided on this site is solely at your own risk.
 
-### Fitness Disclaimer:
+### Fitness Disclaimer
 
 The site cannot and does not contain fitness advice.
 The fitness information is provided for general informational and educational purposes
