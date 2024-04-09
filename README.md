@@ -62,18 +62,19 @@ your health is not compromised due to excessively quick weight change or extreme
 - Maximum weekly weight gain: 2 lbs (0.907 kg)
 - Recommended weekly weight gain: Between 0.25 lbs (0.113 kg) and 0.5 lbs (0.226 kg) to minimize fat gain
 
-### Optimal Dietary Fat Intake
+### Understanding Dietary Fat Requirements for Optimal Health
+To maintain good health and proper bodily functions, it's crucial to consume a minimum amount of fat every day. However, the scientific consensus regarding the precise amount required is yet to be reached. Thus, an estimated value with a 20% safety margin is commonly considered to ensure an adequate fat intake. 
 
-To maintain proper health status, a minimum daily amount of fat must be consumed.
+One key aspect of dietary fats is to maintain the required level of essential fatty acids in our bodies to prevent deficiencies and related health issues. 
 
-Due to lack of scientific understanding,
-the best effort approach is made for determining fat grams with a safety factor (20%).
+#### Essential Fatty Acids: The Daily Requirement
+Below are the daily requirements of essential fatty acids:
 
-It is important to maintain essential fatty acid status to avoid deficiencies.
+- [Omega 3 DHA & EPA: Ideally, an adult should consume between 1.75 to 2.5 grams per day for optimal health.](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
 
-#### Essential Fatty Acids
-- [Optimal Omega 3 DHA & EPA (1.75 to 2.5 grams daily)](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
-- [Linoleic Acid (11 to 17 grams daily)](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+- [Linoleic Acid: The recommended intake is between 11 to 17 grams per day.](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+
+Consistently incorporating these essential fatty acids into your diet will contribute significantly to maintaining your overall health.
 
 ## Practical Application
 
