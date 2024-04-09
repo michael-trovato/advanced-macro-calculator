@@ -15,7 +15,7 @@ then an average ideal body weight based on height will be used to estimate lean 
 If you have greater than average muscle mass for your weight and height, then it would be wise to find (DEXA, Bod Pod),
 and enter your body fat percentage.
 
-An accurate body fat percentage will ensure a proper protein target.
+An accurate body fat percentage will ensure a proper protein target per day as it is calculated based on lean body mass.
 
 The default protein target is set to 2.2 grams per kg of lean body mass.
 
@@ -94,7 +94,7 @@ While trying to be diet agnostic, there are certain principles that would be gen
 - Prioritize protein consumption.
 - Muscle Protein Synthesis should be maximized.
 - Four meals per day (spaced evenly) will keep amino acids elevated in the blood stream throughout the day. However, two to four meals per day are practically acceptable.
-- The first and last meals of the day are the most important to consume enough amino acids to stop catabolism.
+- The first and last meals of the day are important to consume enough amino acids to stop catabolism, but getting enough proteins after resistence training is imperative.
 - [40 to 50 grams](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893) of protein will optimally stimulate MPS. (Work in Progress)
 
 #### Weight Loss:
