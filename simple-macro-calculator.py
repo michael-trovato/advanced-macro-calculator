@@ -219,7 +219,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
             ideal_weight = FEMALE_INITIAL_WEIGHT + (height_difference * 5)
             lean_body_mass = lbs_to_kg(ideal_weight * (1 - IDEAL_BFP_FEMALE / 100))
 
-        body_fat_percentage = 1 - lean_body_mass / weight
+        body_fat_percentage = (1 - lean_body_mass / weight) * 100
 
     protein_grams = int(lean_body_mass * GRAM_PROTEIN_LEAN_BODY_MASS_KG)  # Set Minimum Protein
     fat_grams, omega3_grams, linoleic_acid_grams = calculate_fatty_acids(sex, age, lean_body_mass)
@@ -311,5 +311,5 @@ print(f"Carbs: {macros['carb']['grams']}g ({macros['carb']['calories']} calories
 total_calories = macros['protein']['calories'] + macros['fat']['total']['calories'] + macros['carb']['calories']
 print(f"Total Calories: {total_calories:,} kcal")
 print(f"Percentage Protein: {macros['protein']['calories'] / total_calories * 100:.2f}%")
-print(f"Learn Body Mass: {lbm['weight']:.0f} {lbm['units']}")
-print(f"Body Fat Percentage: {bfp*100:.2f}%")
+print(f"Lean Body Mass: {lbm['weight']:.0f} {lbm['units']}")
+print(f"Body Fat Percentage: {bfp:.2f}%")
