@@ -19,31 +19,38 @@ LINOLEIC_ACID_AI = {
 LBM_POP_DIST_MIN = 45  # 100 lbs
 LBM_POP_DIST_MAX = 91  # 200 lbs
 
+
 def lbs_to_kg(lbs: float) -> float:
     return lbs / 2.205
+
 
 def kg_to_lbs(kgs: float) -> float:
     return kgs / 0.4536
 
+
 def cm_to_inches(cms: float) -> float:
     return cms * 0.393701
+
 
 def inches_to_cm(inches: float) -> float:
     return inches * 2.54
 
+
 def cm_to_meters(cms: float) -> float:
     return cms / 100
 
+
 def calculate_bmi(height, weight):
     meters = cm_to_meters(height)
-    return weight / meters**2
+    return weight / meters ** 2
+
 
 def bmi_to_bfp(bmi, sex, age):
     if sex == 'm':
-        bfp = (1.20 * bmi) + (0.23 * age) - (10.8 * 1) - 5.4
+        return (1.20 * bmi) + (0.23 * age) - (10.8 * 1) - 5.4
     elif sex == 'f':
-        bfp = (1.20 * bmi) + (0.23 * age) - (10.8 * 0) - 5.4
-    return bfp
+        return (1.20 * bmi) + (0.23 * age) - (10.8 * 0) - 5.4
+
 
 def parse_input(user_input, available_units):
     # Define the regex pattern to match numbers and units
@@ -184,11 +191,12 @@ while True:
           '(2) All Fat\n'
           '(3) Mix Carbs & Fat\n'
           '(4) Mix Fat & Protein\n'
-          '(5) Mix Carbs, Fat & Protein')
+          '(5) Mix Carbs & Protein\n'
+          '(6) Mix Carbs, Fat & Protein')
     try:
         extra = int(input('> '))
     except ValueError:
-        print('Error: Please enter a number 1 through 5.')
+        print('Error: Please enter a number 1 through 6.')
         continue
     break
 
@@ -207,7 +215,8 @@ while True:
     break
 
 
-def calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex):
+def calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units,
+                     sex):
     lean_body_mass = None
 
     # Convert to KG
@@ -243,23 +252,28 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         weight_change = MAX_KG_GAIN_PER_WEEK
 
     daily_calorie_change = weight_change * CALORIES_PER_KG_BODY_FAT / 7
-    daily_calories = tdee + daily_calorie_change
+    daily_calories = int(tdee + daily_calorie_change)
     extra_calories = daily_calories - protein_calories - fat_calories
+    if extra_calories < 0:
+        extra_calories = 0
 
     carb_grams = None
-    if extra == 1:
+    if extra == 1:  # All Carbs
         carb_grams = int(extra_calories / CALORIES_PER_G_CARB)
-    elif extra == 2:
+    elif extra == 2:  # All Fat
         carb_grams = 0
         fat_grams += int(extra_calories / CALORIES_PER_G_FAT)
-    elif extra == 3:
+    elif extra == 3:  # Mix Carbs & Fat
         carb_grams = int(extra_calories / 2 / CALORIES_PER_G_CARB)
         fat_grams += int(extra_calories / 2 / CALORIES_PER_G_FAT)
-    elif extra == 4:
+    elif extra == 4:  # Mix Fat & Protein
         carb_grams = 0
         fat_grams += int(extra_calories / 2 / CALORIES_PER_G_FAT)
         protein_grams += int(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
-    elif extra == 5:
+    elif extra == 5:  # Mix Carbs & Protein
+        carb_grams = int(extra_calories / 2 / CALORIES_PER_G_CARB)
+        protein_grams += int(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
+    elif extra == 6:  # Mix Carbs, Fat, & Protein
         carb_grams = int(extra_calories / 3 / CALORIES_PER_G_CARB)
         fat_grams += int(extra_calories / 3 / CALORIES_PER_G_FAT)
         protein_grams += int(extra_calories / 3 / CALORIES_PER_G_PROTEIN)
@@ -303,12 +317,14 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     return macros, lbm, body_fat_percentage
 
 
-macros, lbm, bfp = calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex)
+macros, lbm, bfp = calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage,
+                                    height, height_units, sex)
 print()
 print(f"Protein: {macros['protein']['grams']}g ({macros['protein']['calories']} calories)")
 print(f"Fat: {macros['fat']['total']['grams']:.0f}g ({macros['fat']['total']['calories']} calories)")
 print(f"    Omega 3: {macros['fat']['omega3']['grams']:.2f}g ({macros['fat']['omega3']['calories']} calories)")
-print(f"    Linoleic Acid: {macros['fat']['linoleic_acid']['grams']}g ({macros['fat']['linoleic_acid']['calories']} calories)")
+print(
+    f"    Linoleic Acid: {macros['fat']['linoleic_acid']['grams']}g ({macros['fat']['linoleic_acid']['calories']} calories)")
 print(f"Carbs: {macros['carb']['grams']}g ({macros['carb']['calories']} calories)")
 
 total_calories = macros['protein']['calories'] + macros['fat']['total']['calories'] + macros['carb']['calories']
