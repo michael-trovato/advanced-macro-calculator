@@ -322,7 +322,7 @@ macros, lbm, bfp = calculate_macros(tdee, extra, change, change_units, weight, w
 print()
 print(f"Protein: {macros['protein']['grams']}g ({macros['protein']['calories']} calories)")
 print(f"Fat: {macros['fat']['total']['grams']:.0f}g ({macros['fat']['total']['calories']} calories)")
-print(f"    Omega 3: {macros['fat']['omega3']['grams']:.2f}g ({macros['fat']['omega3']['calories']} calories)")
+print(f"    Omega 3 DHA & EPA: {macros['fat']['omega3']['grams']:.2f}g ({macros['fat']['omega3']['calories']} calories)")
 print(
     f"    Linoleic Acid: {macros['fat']['linoleic_acid']['grams']}g ({macros['fat']['linoleic_acid']['calories']} calories)")
 print(f"Carbs: {macros['carb']['grams']}g ({macros['carb']['calories']} calories)")
