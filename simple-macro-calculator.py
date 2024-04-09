@@ -1,10 +1,5 @@
 import re
 
-IDEAL_BFP_MALE = 12.5
-IDEAL_BFP_FEMALE = 22.5
-MALE_INITIAL_WEIGHT = 110
-FEMALE_INITIAL_WEIGHT = 100
-INITIAL_HEIGHT = 60
 CALORIES_PER_G_FAT = 9
 CALORIES_PER_G_CARB = 4
 CALORIES_PER_G_PROTEIN = 4
@@ -35,6 +30,20 @@ def cm_to_inches(cms: float) -> float:
 
 def inches_to_cm(inches: float) -> float:
     return inches * 2.54
+
+def cm_to_meters(cms: float) -> float:
+    return cms / 100
+
+def calculate_bmi(height, weight):
+    meters = cm_to_meters(height)
+    return weight / meters**2
+
+def bmi_to_bfp(bmi, sex, age):
+    if sex == 'm':
+        bfp = (1.20 * bmi) + (0.23 * age) - (10.8 * 1) - 5.4
+    elif sex == 'f':
+        bfp = (1.20 * bmi) + (0.23 * age) - (10.8 * 0) - 5.4
+    return bfp
 
 def parse_input(user_input, available_units):
     # Define the regex pattern to match numbers and units
@@ -205,21 +214,15 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     if weight_units == 'lbs':
         weight = lbs_to_kg(weight)
 
-    if height_units == 'cm':
-        height = cm_to_inches(height)
+    if height_units == 'inches':
+        height = inches_to_cm(height)
 
     if body_fat_percentage:
         lean_body_mass = weight * (1 - body_fat_percentage / 100)
     else:
-        height_difference = height - INITIAL_HEIGHT
-        if sex == 'm':
-            ideal_weight = MALE_INITIAL_WEIGHT + (height_difference * 5)
-            lean_body_mass = lbs_to_kg(ideal_weight * (1 - IDEAL_BFP_MALE / 100))
-        elif sex == 'f':
-            ideal_weight = FEMALE_INITIAL_WEIGHT + (height_difference * 5)
-            lean_body_mass = lbs_to_kg(ideal_weight * (1 - IDEAL_BFP_FEMALE / 100))
-
-        body_fat_percentage = (1 - lean_body_mass / weight) * 100
+        bmi = calculate_bmi(height, weight)
+        body_fat_percentage = bmi_to_bfp(bmi, sex, age)
+        lean_body_mass = weight * (1 - body_fat_percentage / 100)
 
     protein_grams = int(lean_body_mass * GRAM_PROTEIN_LEAN_BODY_MASS_KG)  # Set Minimum Protein
     fat_grams, omega3_grams, linoleic_acid_grams = calculate_fatty_acids(sex, age, lean_body_mass)

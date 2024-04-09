@@ -37,35 +37,13 @@ If your body fat percentage is known through a reliable method of testing (DEXA,
 
 If your body fat percentage is unknown, then an estimate will be calculated the following way. 
 
-The initial weight and height is used to find ideal body weight.
+First, your bmi is calculated with your weight and height.
 
-For each inch from 5 feet, a 5 lb change is adjusted to the initial weight.
+Next, using the Deurenberg formula, the body fat percentage is calculated.
 
-Then, lean body fat is calculated.
+Body Fat Percentage = (1.20 × BMI) + (0.23 × Age) − (10.8 × Sex) − 5.4
 
-#### Male:
-
-The initial weight is 110 lbs.
-
-The ideal body fat percentage is set to 12.5%.
-
-##### Example:
-
-Height: 5' 10"
-
-160 lbs = 110 lbs + (10 inches * 5 lbs)
-
-#### Female:
-
-The initial weight is 100 lbs.
-
-The ideal body fat percentage is set to 22.5%.
-
-##### Example:
-
-Height: 5' 5"
-
-125 lbs = 100 lbs + (5 inches * 5 lbs)
+Lastly, lean body mass is calculated based on total body weight and the calculated body fat percentage.
 
 ## Safety:
 
@@ -202,6 +180,12 @@ The following doctors have contributed greatly to my understanding of nutritiona
 - Theodore (Ted) Naiman, MD
 - Layne Norton, PhD
 - Rhonda Patrick, PhD
+
+## Constants:
+
+- Grams Protein per kg LBM = 2.2
+- Minimum Grams Fat per kg LBM = 0.75
+- Minimum Grams Fat Safety Factor = 0.2
 
 ## Disclaimers:
 
