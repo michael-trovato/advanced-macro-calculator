@@ -152,7 +152,7 @@ This will depend on your muscle mass, recovery time, and experience.
 #### Cardiovascular Training:
 
 Not only great to increase total daily energy expenditure,
-cardio has been linked to [increased life space](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
+cardio has been linked to [increased life span](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
 
 Benefits include:
 - Increased VO2 max
