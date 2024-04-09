@@ -2,13 +2,22 @@
 
 ## How to Use:
 
-Please answer the prompts with the required information. If your body fat percentage isn't known, then a population average will be used to estimate lean body mass.
+### Running:
 
-If you have greater than average muscle mass for your weight and height, then it would be wise to find (DEXA), and enter your body fat percentage.
+[Python 3](https://www.python.org/downloads/) is required to run this calculator. The most recent version is recommended.
+
+### Prompts:
+
+Please answer the prompts with the required information.
+If your body fat percentage isn't known,
+then an average ideal body weight based on height will be used to estimate lean body mass.
+
+If you have greater than average muscle mass for your weight and height, then it would be wise to find (DEXA, Bod Pod),
+and enter your body fat percentage.
 
 An accurate body fat percentage will ensure a proper protein target.
 
-The protein target is set to 1.2 grams per lb of lean body mass.
+The default protein target is set to 2.2 grams per kg of lean body mass.
 
 ## Body Fat Percentage:
 
