@@ -39,7 +39,7 @@ If your body fat percentage is unknown, then an estimate will be calculated the 
 
 First, your bmi is calculated with your weight and height.
 
-Next, using the Deurenberg formula, the body fat percentage is calculated.
+Next, using the [Deurenberg formula](https://en.wikipedia.org/wiki/Body_fat_percentage#From_BMI), the body fat percentage is calculated.
 
 Body Fat Percentage = (1.20 × BMI) + (0.23 × Age) − (10.8 × Sex) − 5.4
 
