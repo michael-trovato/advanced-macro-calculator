@@ -95,7 +95,7 @@ While trying to be diet agnostic, there are certain principles that would be gen
 - Muscle Protein Synthesis should be maximized.
 - Four meals per day (spaced evenly) will keep amino acids elevated in the blood stream throughout the day. However, two to four meals per day are practically acceptable.
 - The first and last meals of the day are the most important to consume enough amino acids to stop catabolism.
-- 40 to 50 grams of protein will optimally stimulate MPS.
+- [40 to 50 grams](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893) of protein will optimally stimulate MPS. (Work in Progress)
 
 #### Weight Loss:
 
