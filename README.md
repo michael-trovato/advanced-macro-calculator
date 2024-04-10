@@ -226,6 +226,24 @@ The following doctors have contributed greatly to my understanding of nutritiona
 - **Minimum Fat Grams Safety Factor:** 20%
 - **Maximum Caloric Deficit Below BMR:** 20%
 
+### Minimum Dietary Fat
+
+To ensure our users maintain optimal hormonal health, we've set the minimum dietary fat intake at **0.75 g/kg<sub>lbm</sub>/day**.
+This guideline is informed by scientific research and navigates the shortcomings
+associated with the more traditional methods of calculating fat intake: *percentage of total daily calories* and *percentage of total body weight*.
+
+- **Percentage of Total Daily Calories**:
+While this method is widely used, it can inadvertently underestimate the necessary fat intake during periods of caloric deficit,
+potentially compromising hormonal balance and overall health.
+- **Percentage of Total Body Weight**:
+This approach might lead to an overestimation of fat needs for individuals with a higher body fat percentage.
+It fails to account for the fact that adipose tissue does not directly increase dietary fat requirements
+for maintaining essential physiological functions, including hormonal health.
+
+Our approach, focusing on **lean body mass (LBM)**, offers a more individualized strategy.
+It ensures that all users, regardless of their total body weight or caloric intake, receive a foundational amount of dietary fat essential for hormone production and other critical bodily functions.
+This method acknowledges that while body composition varies greatly among individuals, the fundamental need for dietary fats to support health and well-being does not.
+
 ## Disclaimers
 This calculator is designed to provide general guidance and informational content only.
 It is not a substitute for professional medical advice or for the care
