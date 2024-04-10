@@ -102,6 +102,51 @@ def calculate_fatty_acids(sex, age, lean_body_mass):
     return total, omega3, linoleic_acid
 
 
+def print_results(macros, lbm, bfp, bmr, warn):
+    total_calories = macros['protein']['calories'] + macros['fat']['total']['calories'] + macros['carb']['calories']
+    caloric_change = total_calories - tdee
+
+    print('\n\n')
+    print('===== YOUR DIETARY BREAKDOWN =====')
+    print(
+        f"1. Protein:\n   Amount: {macros['protein']['grams']}g\n   Calories from Protein: {macros['protein']['calories']} kcal")
+    print(
+        f"   Protein Percentage: {macros['protein']['calories'] / total_calories * 100:.2f}%")
+    print(
+        f"   Protein / Lean Body Mass: {macros['protein']['grams'] / lbm['kg']:.2f} g/kg ({macros['protein']['grams'] / lbm['lbs']:.2f} g/lbs)\n")
+    print(
+        f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
+    print(
+        f"   Omega 3 DHA & EPA:\n      Amount: {macros['fat']['omega3']['grams']:.2f}g\n      Calories: {macros['fat']['omega3']['calories']} kcal")
+    print(
+        f"   Linoleic Acid:\n      Amount: {macros['fat']['linoleic_acid']['grams']}g\n      Calories: {macros['fat']['linoleic_acid']['calories']} kcal\n")
+    print(
+        f"3. Carbs:\n   Amount: {macros['carb']['grams']}g\n   Calories from Carbs: {macros['carb']['calories']} kcal")
+
+    print(f"\nDaily Caloric Intake: {total_calories:,} kcal")
+    print(f"Daily Caloric Change: {caloric_change:,} kcal")
+
+    print(f"\nYour Body Stats:")
+    print(f"Lean Body Mass: {lbm['kg']:.0f} kg ({lbm['lbs']:.0f} lbs)")
+    print(f"Body Fat Percentage: {bfp:.2f}%")
+    print(f"Total Daily Energy Expenditure: {tdee:,} kcal")
+    print(f"Basal Metabolic Rate: {bmr:,} kcal")
+
+    if warn:
+        print()
+        print('===== IMPORTANT MEDICAL WARNING =====')
+        print(
+            f'Your calculated daily calorie intake ({total_calories:,} kcal) is below your estimated basal metabolic rate (BMR) of {bmr:,} kcal.')
+        print(
+            'Consuming fewer calories than your BMR for an extended period can lead to potential health risks, including nutrient deficiencies and metabolic slowdown.')
+        print(
+            'Ensure your diet includes a variety of nutrient-dense foods to meet your vitamin, mineral, and overall nutritional needs.')
+        print(
+            'Additionally, consider consulting with a healthcare provider or dietitian before starting any calorie-restricted diet, especially one below your BMR.')
+        print(
+            'They may suggest a tailored multivitamin or specific supplements based on your individual health profile and dietary needs.')
+
+
 def get_user_input():
     body_fat_percentage = None
     height = None
@@ -355,44 +400,8 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     return macros, lbm, body_fat_percentage, bmr, warn
 
 
-tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex, age = get_user_input()
-macros, lbm, bfp, bmr, warn = calculate_macros(tdee, extra, change, change_units, weight, weight_units,
-                                               body_fat_percentage, height, height_units, sex, age)
-
-total_calories = macros['protein']['calories'] + macros['fat']['total']['calories'] + macros['carb']['calories']
-caloric_change = total_calories - tdee
-
-print('\n\n')
-print('===== YOUR DIETARY BREAKDOWN =====')
-print(
-    f"1. Protein:\n   Amount: {macros['protein']['grams']}g\n   Calories from Protein: {macros['protein']['calories']} kcal")
-print(
-    f"   Protein Percentage: {macros['protein']['calories'] / total_calories * 100:.2f}%")
-print(
-    f"   Protein / Lean Body Mass: {macros['protein']['grams'] / lbm['kg']:.2f} g/kg ({macros['protein']['grams'] / lbm['lbs']:.2f} g/lbs)\n")
-print(
-    f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
-print(
-    f"   Omega 3 DHA & EPA:\n      Amount: {macros['fat']['omega3']['grams']:.2f}g\n      Calories: {macros['fat']['omega3']['calories']} kcal")
-print(
-    f"   Linoleic Acid:\n      Amount: {macros['fat']['linoleic_acid']['grams']}g\n      Calories: {macros['fat']['linoleic_acid']['calories']} kcal\n")
-print(f"3. Carbs:\n   Amount: {macros['carb']['grams']}g\n   Calories from Carbs: {macros['carb']['calories']} kcal")
-
-
-print(f"\nDaily Caloric Intake: {total_calories:,} kcal")
-print(f"Daily Caloric Change: {caloric_change:,} kcal")
-
-print(f"\nYour Body Stats:")
-print(f"Lean Body Mass: {lbm['kg']:.0f} kg ({lbm['lbs']:.0f} lbs)")
-print(f"Body Fat Percentage: {bfp:.2f}%")
-print(f"Total Daily Energy Expenditure: {tdee:,} kcal")
-print(f"Basal Metabolic Rate: {bmr:,} kcal")
-
-if warn:
-    print()
-    print('===== IMPORTANT MEDICAL WARNING =====')
-    print(f'Your calculated daily calorie intake ({total_calories:,} kcal) is below your estimated basal metabolic rate (BMR) of {bmr:,} kcal.')
-    print('Consuming fewer calories than your BMR for an extended period can lead to potential health risks, including nutrient deficiencies and metabolic slowdown.')
-    print('Ensure your diet includes a variety of nutrient-dense foods to meet your vitamin, mineral, and overall nutritional needs.')
-    print('Additionally, consider consulting with a healthcare provider or dietitian before starting any calorie-restricted diet, especially one below your BMR.')
-    print('They may suggest a tailored multivitamin or specific supplements based on your individual health profile and dietary needs.')
+if __name__ == '__main__':
+    tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex, age = get_user_input()
+    macros, lbm, bfp, bmr, warn = calculate_macros(tdee, extra, change, change_units, weight, weight_units,
+                                                   body_fat_percentage, height, height_units, sex, age)
+    print_results(macros, lbm, bfp, bmr, warn)
