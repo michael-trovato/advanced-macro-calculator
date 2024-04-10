@@ -96,15 +96,15 @@ The distribution in mixed categories is done considering the caloric value per g
 When it comes to following a diet, certain general principles are universally acknowledged,
 irrespective of the specific dietary choice. Here are the key points to remember:
 
-- Protein should be your top priority: Protein is essential as it helps build and repair body tissues. Prioritize its consumption to ensure that your body gets an adequate supply every day.
+- **Protein should be your top priority:** Protein is essential as it helps build and repair body tissues. Prioritize its consumption to ensure that your body gets an adequate supply every day.
 
-- Maximize Muscle Protein Synthesis (MPS): MPS is a repair process that remodels and strengthens our muscles. You should strive to maximize this process.
+- **Maximize Muscle Protein Synthesis (MPS):** MPS is a repair process that remodels and strengthens our muscles. You should strive to maximize this process.
 
-- Consider meal frequency: Consuming four meals a day, evenly spaced will help maintain a steady supply of amino acids in the bloodstream throughout the day. Nonetheless, at a practical level, consuming two to four meals per day is acceptable and more feasible for most.
+- **Consider meal frequency:** Consuming four meals a day, evenly spaced will help maintain a steady supply of amino acids in the bloodstream throughout the day. Nonetheless, at a practical level, consuming two to four meals per day is acceptable and more feasible for most.
 
-- Pay attention to the first and last meals: The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue). It's particularly important to ensure adequate protein intake after resistance training sessions.
+- **Pay attention to the first and last meals:** The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue). It's particularly important to ensure adequate protein intake after resistance training sessions.
 
-- Optimal protein quantity for MPS stimulation: Research suggests that an intake of 20–40 grams<sup>[[1]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[2]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup> of protein can optimally stimulate MPS. This will depend on the [leucine content](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6248570/) of the protein.
+- **Optimal protein quantity for MPS stimulation:** Research suggests that an intake of 20–40 grams<sup>[[1]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[2]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup> of protein can optimally stimulate MPS. This will depend on the [leucine content](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6248570/) of the protein.
 
 Remember, every individual's dietary needs and responses can vary. Always consult with a healthcare professional before making significant changes to your diet.
 
@@ -116,16 +116,16 @@ Remember to meet your daily protein and fat targets!
 
 ##### Protein Intake
 
-Moving beyond 2.2 g/kg<sub>lbm</sub>/day during a calorie deficit has several advantages:
+Moving beyond **2.2 g/kg<sub>lbm</sub>/day** during a calorie deficit has several advantages:
 
 1. Increased Satiety
-2. Increases Caloric Expenditure (TEF)
+2. Increased Caloric Expenditure (TEF)
 
 ###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
 
-- Protein: 20-30%
-- Carbs: 5-10%
-- Fat: 0-3%
+- **Protein:** 20–30%
+- **Carbs:** 5–10%
+- **Fat:** 0–3%
 
 ##### Examples
 - Lean Meats
@@ -162,8 +162,8 @@ Measure your waist circumference around the naval, then divide that number by yo
 Your WHtR should be less than 0.5.
 
 #### Boundary Values
-- 0.4—0.49: Healthy
-- 0.5—0.59: Increased Central Adiposity
+- 0.4–0.49: Healthy
+- 0.5–0.59: Increased Central Adiposity
 - 0.6+: High Central Adiposity
 
 #### Example
