@@ -76,25 +76,43 @@ Below are the daily requirements of essential fatty acids:
 
 Consistently incorporating these essential fatty acids into your diet will contribute significantly to maintaining your overall health.
 
+## Managing your Caloric Intake
+The calculator meticulously ensures that your optimal protein and fat goals are met according to your dietary needs. Given the remaining calories, you could customize your macro targets. This flexibility comes in handy when you want to modulate the macros according to your specific dietary regime.
+
+### Available Options
+1. **Favor Carbohydrates:** Allocate all remaining calories to carbs.
+2. **Favor Fat:** Direct all remaining calories towards fats.
+3. **Blend of Carbohydrates & Fats:** Distribute remaining calories evenly between carbohydrates and fats.
+4. **Blend of Fat & Protein:** Split remaining calories evenly between fats and proteins.
+5. **Blend of Carbohydrates & Protein:** Evenly divide remaining calories between carbohydrates and proteins.
+6. **Well-Balanced Diet:** Distribute remaining calories amongst carbohydrates, fats, and proteins equally.
+
+The distribution in mixed categories is done considering the caloric value per gram of each macro.
+
 ## Practical Application
 
 ### General Principles
 
-While trying to be diet agnostic, there are certain principles that would be generally accepted.
+When it comes to following a diet, certain general principles are universally acknowledged,
+irrespective of the specific dietary choice. Here are the key points to remember:
 
-- Prioritize protein consumption.
-- Muscle Protein Synthesis should be maximized.
-- Four meals per day (spaced evenly) will keep amino acids elevated in the blood stream throughout the day. However, two to four meals per day are practically acceptable.
-- The first and last meals of the day are important to consume enough amino acids to stop catabolism, but getting enough proteins after resistence training is imperative.
-- [40 to 50 grams](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893) of protein will optimally stimulate MPS. (Work in Progress)
+- Protein should be your top priority: Protein is essential as it helps build and repair body tissues. Prioritize its consumption to ensure that your body gets an adequate supply every day.
+
+- Maximize Muscle Protein Synthesis (MPS): MPS is a repair process that remodels and strengthens our muscles. You should strive to maximize this process.
+
+- Consider meal frequency: Consuming four meals a day, evenly spaced will help maintain a steady supply of amino acids in the bloodstream throughout the day. Nonetheless, at a practical level, consuming two to four meals per day is acceptable and more feasible for most.
+
+- Pay attention to the first and last meals: The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue). It's particularly important to ensure adequate protein intake after resistance training sessions.
+
+- Optimal protein quantity for MPS stimulation: Research suggests that an intake of [40 to 50 grams](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893) of protein can optimally stimulate MPS.
+
+Remember, every individual's dietary needs and responses can vary. Always consult with a healthcare professional before making significant changes to your diet.
 
 #### Weight Loss
 
-If your goal is to lose weight, then it would be wise to eat foods that have a higher satiety per calorie.
-
-Fat would ideally come with the protein itself.
-
-Be sure to reach your protein and fat targets!
+To shed some pounds, choose foods with high satiety per calorie.
+Ideally, aim for protein-rich options that also contain good fats.
+Remember to meet your daily protein and fat targets!
 
 ##### Examples
 - Lean Meats
