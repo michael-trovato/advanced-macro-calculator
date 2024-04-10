@@ -221,10 +221,10 @@ The following doctors have contributed greatly to my understanding of nutritiona
 
 ## Constants
 
-- Minimum Protein Intake: [2.2 g/kg<sub>lbm</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
-- Minimum Fat Grams: 0.75 g/kg<sub>lbm</sub>/day
-- Minimum Fat Grams Safety Factor: 20%
-- Maximum Caloric Deficit Below BMR: 20%
+- **Minimum Protein Intake:** [2.2 g/kg<sub>lbm</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
+- **Minimum Fat Grams:** 0.75 g/kg<sub>lbm</sub>/day
+- **Minimum Fat Grams Safety Factor:** 20%
+- **Maximum Caloric Deficit Below BMR:** 20%
 
 ## Disclaimers
 This calculator is designed to provide general guidance and informational content only.
