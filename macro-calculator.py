@@ -113,7 +113,7 @@ def print_results(macros, lbm, bfp, bmr, warn):
     print(
         f"   Protein Percentage: {macros['protein']['calories'] / total_calories * 100:.2f}%")
     print(
-        f"   Protein / Lean Body Mass: {macros['protein']['grams'] / lbm['kg']:.2f} g/kg ({macros['protein']['grams'] / lbm['lbs']:.2f} g/lbs)\n")
+        f"   Protein / Lean Body Mass: {macros['protein']['grams'] / lbm['kg']:.2f} g/kg ({macros['protein']['grams'] / lbm['lbs']:.2f} g/lb)\n")
     print(
         f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
     print(
