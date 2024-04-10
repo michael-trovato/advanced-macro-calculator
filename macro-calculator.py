@@ -3,22 +3,20 @@ import re
 CALORIES_PER_G_FAT = 9
 CALORIES_PER_G_CARB = 4
 CALORIES_PER_G_PROTEIN = 4
-CALORIES_PER_KG_BODY_FAT = 7700
-MAX_KG_LOSS_PER_WEEK = -0.907185
+CALORIES_PER_KG_BODY_FAT = 7700  # 3,500 kcal/lb
+MAX_KG_LOSS_PER_WEEK = -0.907185  # -2 lbs
 MAX_KG_GAIN_PER_WEEK = 0.907185  # 2 lbs
 MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
 MIN_FAT_G_LBM_KG = 0.75
 MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.2
-OMEGA3_INTAKE_G_MIN = 1.75
-OMEGA3_INTAKE_G_MAX = 2.5
-LINOLEIC_ACID_AI_AGE_THRESHOLD = 50
+OMEGA3_INTAKE_RANGE = (1.75, 25)  # Grams
+LINOLEIC_ACID_AI_AGE_THRESHOLD = 50  # Years
 LINOLEIC_ACID_AI = {
     'm': [17, 14],
     'f': [12, 11]
 }
-LBM_POP_DIST_MIN = 45  # 100 lbs
-LBM_POP_DIST_MAX = 91  # 200 lbs
+LBM_POP_DIST = (34, 72)  # 75-159 lbs
 
 
 def lbs_to_kg(lbs: float) -> float:
@@ -84,11 +82,11 @@ def parse_input(user_input, available_units):
 
 
 def calculate_fatty_acids(sex, age, lean_body_mass):
-    ratio = (lean_body_mass - LBM_POP_DIST_MIN) / (LBM_POP_DIST_MAX - LBM_POP_DIST_MIN)
-    omega3 = OMEGA3_INTAKE_G_MIN + (ratio * (OMEGA3_INTAKE_G_MAX - OMEGA3_INTAKE_G_MIN))
+    ratio = (lean_body_mass - LBM_POP_DIST[0]) / (LBM_POP_DIST[1] - LBM_POP_DIST[0])
+    omega3 = OMEGA3_INTAKE_RANGE[0] + (ratio * (OMEGA3_INTAKE_RANGE[1] - OMEGA3_INTAKE_RANGE[0]))
 
-    if omega3 < OMEGA3_INTAKE_G_MIN:
-        omega3 = OMEGA3_INTAKE_G_MIN
+    if omega3 < OMEGA3_INTAKE_RANGE[0]:
+        omega3 = OMEGA3_INTAKE_RANGE[0]
 
     if age < LINOLEIC_ACID_AI_AGE_THRESHOLD:
         linoleic_acid = LINOLEIC_ACID_AI[sex][0]
@@ -345,10 +343,10 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         }
     }
 
-    # Convert kg to lbs
-    if weight_units == 'lbs':
-        lean_body_mass = kg_to_lbs(lean_body_mass)
-    lbm = {'weight': lean_body_mass, 'units': weight_units}
+    lbm = {
+        'kg': lean_body_mass,
+        'lbs': kg_to_lbs(lean_body_mass),
+    }
 
     return macros, lbm, body_fat_percentage, bmr, warn
 
@@ -364,7 +362,9 @@ print('===== YOUR DIETARY BREAKDOWN =====')
 print(
     f"1. Protein:\n   Amount: {macros['protein']['grams']}g\n   Calories from Protein: {macros['protein']['calories']} kcal")
 print(
-    f"   Protein Percentage: {macros['protein']['calories'] / total_calories * 100:.2f}%\n")
+    f"   Protein Percentage: {macros['protein']['calories'] / total_calories * 100:.2f}%")
+print(
+    f"   Protein / Lean Body Mass: {macros['protein']['grams'] / lbm['kg']:.2f} g/kg ({macros['protein']['grams'] / lbm['lbs']:.2f} g/lbs)\n")
 print(
     f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
 print(
@@ -378,7 +378,7 @@ print(f"\nDaily Caloric Intake: {total_calories:,} kcal")
 print(f"Daily Caloric Change: {caloric_change:,} kcal")
 
 print(f"\nYour Body Stats:")
-print(f"Lean Body Mass: {lbm['weight']:.0f} {lbm['units']}")
+print(f"Lean Body Mass: {lbm['kg']:.0f} kg ({lbm['lbs']:.0f} lbs)")
 print(f"Body Fat Percentage: {bfp:.2f}%")
 print(f"Total Daily Energy Expenditure: {tdee:,} kcal")
 print(f"Basal Metabolic Rate: {bmr:,} kcal")
