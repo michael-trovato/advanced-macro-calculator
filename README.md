@@ -99,10 +99,12 @@ Be sure to reach your protein and fat targets!
 ##### Examples
 - Lean Meats
   - 93% Ground Beef
-  - Turkey Breast
-  - Wild Caught Salmon
-  - Sardines
+  - Turkey
   - Chicken
+- Wild Caught Fish
+  - Salmon
+  - Sardines
+  - Mackerel
 - Non-Fat Yogurt
 - Steamed Vegetables
 - Tubers
