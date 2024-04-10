@@ -1,4 +1,5 @@
 import re
+import math
 
 CALORIES_PER_G_FAT = 9
 CALORIES_PER_G_CARB = 4
@@ -10,7 +11,7 @@ MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
 MIN_FAT_G_LBM_KG = 0.75
 MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.2
-OMEGA3_INTAKE_RANGE = (1.75, 25)  # Grams
+OMEGA3_INTAKE_RANGE = (1.75, 2.5)  # Grams
 LINOLEIC_ACID_AI_AGE_THRESHOLD = 50  # Years
 LINOLEIC_ACID_AI = {
     'm': [17, 14],
@@ -93,7 +94,7 @@ def calculate_fatty_acids(sex, age, lean_body_mass):
     else:
         linoleic_acid = LINOLEIC_ACID_AI[sex][1]
 
-    total = lean_body_mass * MIN_FAT_G_LBM_KG * (1 + MIN_FAT_SAFETY_FACTOR_PERCENTAGE)
+    total = math.ceil(lean_body_mass * MIN_FAT_G_LBM_KG * (1 + MIN_FAT_SAFETY_FACTOR_PERCENTAGE))
 
     if total < omega3 + linoleic_acid:
         total = omega3 + linoleic_acid
@@ -101,146 +102,148 @@ def calculate_fatty_acids(sex, age, lean_body_mass):
     return total, omega3, linoleic_acid
 
 
-print("Press Ctrl-C to quit...")
+def get_user_input():
+    body_fat_percentage = None
+    height = None
+    height_units = None
+    sex = None
 
-# TDEE
-while True:
-    tdee = None
-    try:
-        print()
-        tdee = int(input('What is your Total Daily Energy Expenditure? '))
-    except ValueError:
-        print()
-        print('Error: Please enter a number.')
-        continue
-    if tdee < 0:
-        print()
-        print('Error: Please enter a positive number.')
-        continue
-    break
+    print("Press Ctrl-C to quit...")
 
-# Weight
-while True:
-    print()
-    try:
-        weight_input = input('What is your weight (units: lbs or kg)? ')
-        weight, weight_units = parse_input(weight_input, available_units=['lbs', 'kg'])
-    except ValueError:
-        print()
-        print('Error: Please enter a number with lbs or kg as units.')
-        continue
-    if weight <= 0:
-        print()
-        print('Error: Please enter a positive number.')
-        continue
-    break
-
-while True:
-    print()
-    bfp_known = input('Do you know your Body Fat Percentage (Y/N)? ').lower()
-    if bfp_known in ['y', 'n']:
-        break
-    else:
-        print()
-        print('Error: Please enter either Y or N.')
-        continue
-
-body_fat_percentage = None
-height = None
-height_units = None
-sex = None
-if bfp_known == 'y':
-    # Get BFP
+    # TDEE
     while True:
-        print()
+        tdee = None
         try:
-            body_fat_percentage = float(input('What is your body fat percentage? '))
+            print()
+            tdee = int(input('What is your Total Daily Energy Expenditure? '))
         except ValueError:
             print()
             print('Error: Please enter a number.')
             continue
-        if body_fat_percentage <= 0:
+        if tdee < 0:
             print()
             print('Error: Please enter a positive number.')
             continue
-        elif body_fat_percentage >= 100:
+        break
+
+    # Weight
+    while True:
+        print()
+        try:
+            weight_input = input('What is your weight (units: lbs or kg)? ')
+            weight, weight_units = parse_input(weight_input, available_units=['lbs', 'kg'])
+        except ValueError:
             print()
-            print('Error: Body Fat Percentage must be between 0 and 100.')
+            print('Error: Please enter a number with lbs or kg as units.')
+            continue
+        if weight <= 0:
+            print()
+            print('Error: Please enter a positive number.')
             continue
         break
 
-# Height
-while True:
-    print()
-    try:
-        height_input = input('What is your height (units: inches or cm)? ')
-        height, height_units = parse_input(height_input, available_units=['inches', 'cm'])
-    except ValueError:
+    while True:
         print()
-        print('Error: Please enter a number with inches or cm as units.')
-        continue
-    if height <= 0:
-        print()
-        print('Error: Please enter a positive number.')
-        continue
-    break
+        bfp_known = input('Do you know your Body Fat Percentage (Y/N)? ').lower()
+        if bfp_known in ['y', 'n']:
+            break
+        else:
+            print()
+            print('Error: Please enter either Y or N.')
+            continue
 
-# Sex
-while True:
-    print()
-    sex = input('What is your sex (M/F)? ').lower()
-    if sex in ['m', 'f']:
+    if bfp_known == 'y':
+        # Get BFP
+        while True:
+            print()
+            try:
+                body_fat_percentage = float(input('What is your body fat percentage? '))
+            except ValueError:
+                print()
+                print('Error: Please enter a number.')
+                continue
+            if body_fat_percentage <= 0:
+                print()
+                print('Error: Please enter a positive number.')
+                continue
+            elif body_fat_percentage >= 100:
+                print()
+                print('Error: Body Fat Percentage must be between 0 and 100.')
+                continue
+            break
+
+    # Height
+    while True:
+        print()
+        try:
+            height_input = input('What is your height (units: inches or cm)? ')
+            height, height_units = parse_input(height_input, available_units=['inches', 'cm'])
+        except ValueError:
+            print()
+            print('Error: Please enter a number with inches or cm as units.')
+            continue
+        if height <= 0:
+            print()
+            print('Error: Please enter a positive number.')
+            continue
         break
-    else:
-        print()
-        print('Error: Please enter either M or F.')
 
-# Age
-while True:
-    print()
-    try:
-        age = int(input('What is your age (years)? ').lower())
+    # Sex
+    while True:
+        print()
+        sex = input('What is your sex (M/F)? ').lower()
+        if sex in ['m', 'f']:
+            break
+        else:
+            print()
+            print('Error: Please enter either M or F.')
+
+    # Age
+    while True:
+        print()
+        try:
+            age = int(input('What is your age (years)? ').lower())
+            break
+        except ValueError:
+            print()
+            print('Error: Please enter a number.')
+
+    while True:
+        print()
+        print('How would you like to distribute remaining calories?\n'
+              '(1) All Carbs\n'
+              '(2) All Fat\n'
+              '(3) Mix Carbs & Fat\n'
+              '(4) Mix Fat & Protein\n'
+              '(5) Mix Carbs & Protein\n'
+              '(6) Mix Carbs, Fat & Protein')
+        try:
+            extra = int(input('> '))
+        except ValueError:
+            print()
+            print('Error: Please enter a number 1 through 6.')
+            continue
         break
-    except ValueError:
-        print()
-        print('Error: Please enter a number.')
 
-while True:
-    print()
-    print('How would you like to distribute remaining calories?\n'
-          '(1) All Carbs\n'
-          '(2) All Fat\n'
-          '(3) Mix Carbs & Fat\n'
-          '(4) Mix Fat & Protein\n'
-          '(5) Mix Carbs & Protein\n'
-          '(6) Mix Carbs, Fat & Protein')
-    try:
-        extra = int(input('> '))
-    except ValueError:
+    while True:
         print()
-        print('Error: Please enter a number 1 through 6.')
-        continue
-    break
+        print('What change per week (units: %, lbs, kg)?\n'
+              'Example:\n'
+              '-1.0% (Lose 1% per week)\n'
+              '0.25 lbs (Gain 0.25 lbs per week)')
+        try:
+            change, change_units = parse_input(input('> '), available_units=['%', 'lbs', 'kg'])
+        except ValueError:
+            print()
+            print('Error: Please enter a number and units (%, lbs, kg).')
+            continue
+        break
 
-while True:
-    print()
-    print('What change per week (units: %, lbs, kg)?\n'
-          'Example:\n'
-          '-1.0% (Lose 1% per week)\n'
-          '0.25 lbs (Gain 0.25 lbs per week)')
-    try:
-        change, change_units = parse_input(input('> '), available_units=['%', 'lbs', 'kg'])
-    except ValueError:
-        print()
-        print('Error: Please enter a number and units (%, lbs, kg).')
-        continue
-    break
+    return tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex, age
 
 
 def calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units,
-                     sex):
-    lean_body_mass = None
-
+                     sex, age):
     # Convert to kg
     if weight_units == 'lbs':
         weight = lbs_to_kg(weight)
@@ -249,6 +252,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     if height_units == 'inches':
         height = inches_to_cm(height)
 
+    lean_body_mass = None
     if body_fat_percentage:
         lean_body_mass = weight * (1 - body_fat_percentage / 100)
     else:
@@ -256,7 +260,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         body_fat_percentage = bmi_to_bfp(bmi, sex, age)
         lean_body_mass = weight * (1 - body_fat_percentage / 100)
 
-    protein_grams = int(lean_body_mass * GRAM_PROTEIN_LEAN_BODY_MASS_KG)  # Set Minimum Protein
+    protein_grams = math.ceil(lean_body_mass * GRAM_PROTEIN_LEAN_BODY_MASS_KG)  # Set Minimum Protein
     fat_grams, omega3_grams, linoleic_acid_grams = calculate_fatty_acids(sex, age, lean_body_mass)
 
     protein_calories = protein_grams * CALORIES_PER_G_PROTEIN
@@ -293,24 +297,24 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
 
     carb_grams = None
     if extra == 1:  # All Carbs
-        carb_grams = int(extra_calories / CALORIES_PER_G_CARB)
+        carb_grams = math.ceil(extra_calories / CALORIES_PER_G_CARB)
     elif extra == 2:  # All Fat
         carb_grams = 0
-        fat_grams += int(extra_calories / CALORIES_PER_G_FAT)
+        fat_grams += math.ceil(extra_calories / CALORIES_PER_G_FAT)
     elif extra == 3:  # Mix Carbs & Fat
-        carb_grams = int(extra_calories / 2 / CALORIES_PER_G_CARB)
-        fat_grams += int(extra_calories / 2 / CALORIES_PER_G_FAT)
+        carb_grams = math.ceil(extra_calories / 2 / CALORIES_PER_G_CARB)
+        fat_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_FAT)
     elif extra == 4:  # Mix Fat & Protein
         carb_grams = 0
-        fat_grams += int(extra_calories / 2 / CALORIES_PER_G_FAT)
-        protein_grams += int(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
+        fat_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_FAT)
+        protein_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
     elif extra == 5:  # Mix Carbs & Protein
-        carb_grams = int(extra_calories / 2 / CALORIES_PER_G_CARB)
-        protein_grams += int(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
+        carb_grams = math.ceil(extra_calories / 2 / CALORIES_PER_G_CARB)
+        protein_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
     elif extra == 6:  # Mix Carbs, Fat, & Protein
-        carb_grams = int(extra_calories / 3 / CALORIES_PER_G_CARB)
-        fat_grams += int(extra_calories / 3 / CALORIES_PER_G_FAT)
-        protein_grams += int(extra_calories / 3 / CALORIES_PER_G_PROTEIN)
+        carb_grams = math.ceil(extra_calories / 3 / CALORIES_PER_G_CARB)
+        fat_grams += math.ceil(extra_calories / 3 / CALORIES_PER_G_FAT)
+        protein_grams += math.ceil(extra_calories / 3 / CALORIES_PER_G_PROTEIN)
 
     protein_calories = int(protein_grams * CALORIES_PER_G_PROTEIN)
     fat_calories = int(fat_grams * CALORIES_PER_G_FAT)
@@ -351,8 +355,9 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     return macros, lbm, body_fat_percentage, bmr, warn
 
 
-macros, lbm, bfp, bmr, warn = calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage,
-                                    height, height_units, sex)
+tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex, age = get_user_input()
+macros, lbm, bfp, bmr, warn = calculate_macros(tdee, extra, change, change_units, weight, weight_units,
+                                               body_fat_percentage, height, height_units, sex, age)
 
 total_calories = macros['protein']['calories'] + macros['fat']['total']['calories'] + macros['carb']['calories']
 caloric_change = total_calories - tdee
