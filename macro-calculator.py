@@ -55,9 +55,15 @@ def calculate_bmi(height, weight):
 
 def bmi_to_bfp(bmi, sex, age):
     if sex == 'm':
-        return (1.20 * bmi) + (0.23 * age) - (10.8 * 1) - 5.4
+        if age <= 15:
+            return (1.51 * bmi) - (0.70 * age) - (3.6 * 1) + 1.4
+        else:
+            return (1.20 * bmi) + (0.23 * age) - (10.8 * 1) - 5.4
     elif sex == 'f':
-        return (1.20 * bmi) + (0.23 * age) - (10.8 * 0) - 5.4
+        if age <= 15:
+            return (1.51 * bmi) - (0.70 * age) - (3.6 * 0) + 1.4
+        else:
+            return (1.20 * bmi) + (0.23 * age) - (10.8 * 0) - 5.4
 
 
 def parse_input(user_input, available_units):
@@ -80,6 +86,9 @@ def parse_input(user_input, available_units):
 def calculate_fatty_acids(sex, age, lean_body_mass):
     ratio = (lean_body_mass - LBM_POP_DIST_MIN) / (LBM_POP_DIST_MAX - LBM_POP_DIST_MIN)
     omega3 = OMEGA3_INTAKE_G_MIN + (ratio * (OMEGA3_INTAKE_G_MAX - OMEGA3_INTAKE_G_MIN))
+
+    if omega3 < OMEGA3_INTAKE_G_MIN:
+        omega3 = OMEGA3_INTAKE_G_MIN
 
     if age < LINOLEIC_ACID_AI_AGE_THRESHOLD:
         linoleic_acid = LINOLEIC_ACID_AI[sex][0]
@@ -193,10 +202,6 @@ while True:
     print()
     try:
         age = int(input('What is your age (years)? ').lower())
-        if age < 17:
-            print()
-            print('Error: The minimum age is 17 years old.')
-            continue
         break
     except ValueError:
         print()
@@ -340,7 +345,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         }
     }
 
-    # Convert KGS to LBS
+    # Convert kg to lbs
     if weight_units == 'lbs':
         lean_body_mass = kg_to_lbs(lean_body_mass)
     lbm = {'weight': lean_body_mass, 'units': weight_units}
