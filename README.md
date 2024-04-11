@@ -216,7 +216,7 @@ of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en
 
 Measure your waist circumference around the naval, then divide that number by your height (in the same units).
 
-Your WHtR should be less than 0.5 for optimal health.[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157748/)
+Your WHtR should be less than 0.5 for optimal health.<sup>[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157748/)</sup>
 
 #### Boundary Values
 - 0.4–0.49: Healthy
@@ -231,12 +231,12 @@ Waist: 40 inches
 
 40 inches / 70 inches = 0.57 (Elevated Health Risk)
 
-### Exercise
+### Exercise Recommendations
 
 #### Resistence Training
 
 - **Frequency:** It is advised to work each muscle group at least once per week. This frequency aids in preventing muscle atrophy.
-- **For Muscle Gain:** If your goal is hypertrophy, consider engaging each muscle group twice weekly. This frequency is often recommended to optimize muscle growth.
+- **For Muscle Gain:** If your goal is hypertrophy, consider engaging each muscle group twice-weekly. This frequency is often recommended to optimize muscle growth.
 - **Recovery and Training:** To maximize hypertrophy, it would be ideal to schedule your training routine in such a way that you rework each muscle group as soon as it recovers.
 - **Volume:** The volume of training (total number of sets and repetitions) is important for muscle growth and should be adjusted according to individual factors such as training experience, muscle mass, and recovery capacity.
 Typically, more experienced lifters might need a higher volume to continue making gains due to adaptations in muscle endurance and strength.
