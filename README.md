@@ -29,7 +29,7 @@ and entering your body fat percentage.
 
 An accurate body fat percentage will ensure a proper protein target per day as it is calculated based on lean body mass.
 
-The default protein target is set to [2.2 g/kg<sub>lbm</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/).
+The default protein target is set to [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/).
 
 ### Known Body Fat Percentage
 If you know your body fat percentage through reliable testing methods,
