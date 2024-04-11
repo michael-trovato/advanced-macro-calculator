@@ -29,7 +29,7 @@ and entering your body fat percentage.
 
 An accurate body fat percentage will ensure a proper protein target per day as it is calculated based on lean body mass.
 
-The default protein target is set to [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/).
+The default protein target is set to **2.2 g/kg<sub>LBM</sub>/day**<sup>[[1]](https://pubmed.ncbi.nlm.nih.gov/28698222/)</sup>.
 
 ### Known Body Fat Percentage
 If you know your body fat percentage through reliable testing methods,
@@ -81,21 +81,21 @@ to prevent deficiencies and related health issues.
 
 Below are the daily requirements of essential fatty acids:
 
-- **Omega-3 EPA & DHA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.<sup>[[1]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[2]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)</sup>
+- **Omega-3 EPA & DHA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.<sup>[[2]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[3]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)</sup>
 
-- **Linoleic Acid:** The recommended intake is between 11 and 17 grams per day.<sup>[[1]](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)</sup>
+- **Linoleic Acid:** The [recommended intake](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values) is between 11 and 17 grams per day.<sup>[[4]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3650500/)</sup>
 
 ##### Omega-3 EPA & DHA
 
 This calculator specifically measures **EPA & DHA**, which are crucial types of Omega-3,
 despite **alpha-linolenic acid** also being recognized as an essential Omega-3 fatty acid.
 The reason for this lies in the observed inconsistencies within the individuals'
-processes that convert ALA into EPA & DHA.<sup>[[1]](https://pubs.rsc.org/en/content/articlelanding/2018/FO/C7FO01809F)
+processes that convert ALA into EPA & DHA.<sup>[[5]](https://pubs.rsc.org/en/content/articlelanding/2018/FO/C7FO01809F)
 
 There's a note of particular importance to those with the [APOE-4](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease) SNP.
 It's suggested they place a higher precedence on the intake of Omega-3 from fish.
 
-Studies prove that maintaining an [**Omega-3 Index of 8–11%**](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake) yields the greatest health benefits.
+Studies prove that maintaining an **Omega-3 Index of 8–11%** yields the greatest health benefits.<sup>[[2]](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake)</sup>
 The consistent inclusion of these essential fatty acids in your diet plays a pivotal role in preserving the state of your overall health.
 
 #### Minimum Dietary Fat
@@ -128,7 +128,9 @@ consuming some saturated fat per day is known to enhance hormonal health.
 The default minimum recommended intake of saturated fat is set to **0.15 g/kg<sub>LBM</sub>/day**.
 
 ## Managing your Caloric Intake
-The calculator meticulously ensures that your optimal protein and fat goals are met according to your dietary needs. Given the remaining calories, you could customize your macro targets. This flexibility comes in handy when you want to modulate the macros according to your specific dietary regime.
+The calculator meticulously ensures that your optimal protein and fat goals are met according to your dietary needs.
+Given the remaining calories, you select your macro targets.
+This flexibility comes in handy when you want to modulate the macros according to your specific dietary regime.
 
 ### Available Options
 1. **Favor Carbohydrates:** Allocate all remaining calories to carbs.
@@ -151,11 +153,14 @@ irrespective of the specific dietary choice. Here are the key points to remember
 
 - **Maximize Muscle Protein Synthesis (MPS):** MPS is a repair process that remodels and strengthens our muscles. You should strive to maximize this process.
 
-- **Consider meal frequency:** Consuming four meals a day, evenly spaced will help maintain a steady supply of amino acids in the bloodstream throughout the day. Nonetheless, at a practical level, consuming two to four meals per day is acceptable and more feasible for most.
+- **Consider meal frequency:** Consuming four meals a day, evenly spaced will help maintain a steady supply of amino acids in the bloodstream throughout the day.
+Nonetheless, at a practical level, consuming two to four meals per day is acceptable and more feasible for most.
 
-- **Pay attention to the first and last meals:** The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue). It's particularly important to ensure adequate protein intake after resistance training sessions.
+- **Pay attention to the first and last meals:** The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue).
+It's particularly important to ensure adequate protein intake after resistance training sessions.
 
-- **Optimal protein quantity for MPS stimulation:** Research suggests that an intake of 20–40 grams<sup>[[1]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[2]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup> of protein can optimally stimulate MPS. This will depend on the [leucine content](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6248570/) of the protein.
+- **Optimal protein quantity for MPS stimulation:** Research suggests that an intake of 20–40 grams<sup>[[6]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[7]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup> of protein can optimally stimulate MPS.
+This will depend on the leucine content of the protein.<sup>[[16]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6248570/)
 
 Remember, every individual's dietary needs and responses can vary. Always consult with a healthcare professional before making significant changes to your diet.
 
@@ -175,7 +180,7 @@ Raising protein intake beyond **2.2 g/kg<sub>LBM</sub>/day** while maintaining a
 
 However, it's advisable to cap protein intake at **3.0 g/kg<sub>LBM</sub>/day**. Consuming protein beyond this limit is unlikely to offer further improvements in satiety. 
 
-According to [published studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/), healthy resistance-trained individuals can safely consume up to **4.4 g/kg<sub>LBM</sub>/day** of protein.
+According to published studies, healthy resistance-trained individuals can safely consume up to **4.4 g/kg<sub>LBM</sub>/day** of protein.<sup>[[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/)</sup>
 
 ###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
 
@@ -216,7 +221,7 @@ of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en
 
 Measure your waist circumference around the naval, then divide that number by your height (in the same units).
 
-Your WHtR should be less than 0.5 for optimal health.<sup>[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157748/)</sup>
+Your WHtR should be less than 0.5 for optimal health.<sup>[[8]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157748/)</sup>
 
 #### Boundary Values
 - 0.4–0.49: Healthy
@@ -245,21 +250,21 @@ Typically, more experienced lifters might need a higher volume to continue makin
 
 - Increased Hypertrophy
 - Strengthened Muscles & Bones
-- Fall Prevention<sup>[[1]](https://www.cdc.gov/falls/facts.html)</sup>
-- Increased BMR<sup>[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3661116/)</sup>
+- Fall Prevention<sup>[[9]](https://www.cdc.gov/falls/facts.html)</sup>
+- Increased BMR<sup>[[10]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3661116/)</sup>
 
 #### Cardiovascular Training
 
 Not only great to increase total daily energy expenditure,
-cardio has been linked to [increased life span](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
+cardio has been linked to increased life span.<sup>[[11]](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm)
 
 **Benefits:**
 - Increased VO2 max
-- Increased BDNF<sup>[[1]](https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health)</sup>
+- Increased BDNF<sup>[[12]](https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health)</sup>
 - Lower Risk of Cardiovascular Disease
-- Lower Risk of Certain Cancers<sup>[[1]](https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet#what-is-known-about-the-relationship-between-physical-activity-and-cancer-risk)</sup>
-- Improved Outcomes with Infectious Diseases<sup>[[1]](https://www.cdc.gov/coronavirus/2019-ncov/downloads/Brief-Summary-of-Findings-on-the-Association-Between-Physical-Inactivity-and-Severe-COVID-19-Outcomes.pdf)</sup>
-<sup>[[2]](https://bjsm.bmj.com/content/57/19/1231)</sup>
+- Lower Risk of Certain Cancers<sup>[[13]](https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet#what-is-known-about-the-relationship-between-physical-activity-and-cancer-risk)</sup>
+- Improved Outcomes with Infectious Diseases<sup>[[14]](https://www.cdc.gov/coronavirus/2019-ncov/downloads/Brief-Summary-of-Findings-on-the-Association-Between-Physical-Inactivity-and-Severe-COVID-19-Outcomes.pdf)</sup>
+<sup>[[15]](https://bjsm.bmj.com/content/57/19/1231)</sup>
 
 ### Lab Tests
 
@@ -283,7 +288,7 @@ The following doctors have contributed greatly to my understanding of nutritiona
 
 ## Constants
 
-- **Minimum Protein Intake:** [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
+- **Minimum Protein Intake:** 2.2 g/kg<sub>LBM</sub>/day<sup>[[1]](https://pubmed.ncbi.nlm.nih.gov/28698222/)</sup>
 - **Maximum Protein Intake:** 3.0 g/kg<sub>LBM</sub>/day
 - **Minimum Total Fat Grams:** 0.75 g/kg<sub>LBM</sub>/day
 - **Minimum Saturated Fat Grams:** 0.15 g/kg<sub>LBM</sub>/day
@@ -304,3 +309,24 @@ Reliance on any information provided by this calculator is solely at your own ri
 The health and fitness advice provided is for general informational and educational purposes only.
 It is not a substitute for professional advice,
 and we strongly encourage you to consult with fitness professionals before implementing any fitness program.
+
+## References
+
+1. Morton RW, Murphy KT, McKellar SR, Schoenfeld BJ, Henselmans M, Helms E, Aragon AA, Devries MC, Banfield L, Krieger JW, Phillips SM. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. Br J Sports Med. 2018 Mar;52(6):376-384. doi: 10.1136/bjsports-2017-097608. Epub 2017 Jul 11. Erratum in: Br J Sports Med. 2020 Oct;54(19):e7. PMID: 28698222; PMCID: PMC5867436.
+2. "Optimal Omega-3 Intake for Most Adults." FoundMyFitness: Omega-3, n.d., https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults.
+3. Norton, Layne. "Fat Facts: Fat Source Matters." BioLayne, no publication date, https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/.
+4. Whelan J, Fritsche K. Linoleic acid. Adv Nutr. 2013 May 1;4(3):311-2. doi: 10.3945/an.113.003772. PMID: 23674797; PMCID: PMC3650500.
+5. T. Greupner , L. Kutzner , F. Nolte , A. Strangmann , H. Kohrs , A. Hahn , N. H. Schebb and J. P. Schuchardt , Food Funct., 2018, 9 , 1587 —1600
+6. Macnaughton, L.S.; Wardle, S.L.; Witard, O.C.; McGlory, C.; Hamilton, D.L.; Jeromson, S.; Lawrence, C.E.; Wallis, G.A.; Tipton,
+K.D. The response of muscle protein synthesis following whole-body resistance exercise is greater following 40 g than 20 g of
+ingested whey protein. Physiol. Rep. 2016, 4, e12893
+7. Tagawa R, Watanabe D, Ito K, Ueda K, Nakayama K, Sanbongi C, Miyachi M. Dose-response relationship between protein intake and muscle mass increase: a systematic review and meta-analysis of randomized controlled trials. Nutr Rev. 2020 Nov 4;79(1):66–75. doi: 10.1093/nutrit/nuaa104. Epub ahead of print. PMID: 33300582; PMCID: PMC7727026.
+8. Ashwell M, Mayhew L, Richardson J, Rickayzen B. Waist-to-height ratio is more predictive of years of life lost than body mass index. PLoS One. 2014 Sep 8;9(9):e103483. doi: 10.1371/journal.pone.0103483. PMID: 25198730; PMCID: PMC4157748.
+9. "Facts about Falls." Centers for Disease Control and Prevention, n.d., https://www.cdc.gov/falls/facts.html.
+10. McPherron AC, Guo T, Bond ND, Gavrilova O. Increasing muscle mass to improve metabolism. Adipocyte. 2013 Apr 1;2(2):92-8. doi: 10.4161/adip.22500. PMID: 23805405; PMCID: PMC3661116.
+11. "Health Benefits of Physical Activity." Centers for Disease Control and Prevention, n.d., https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm.
+12. "BDNF Provides a Possible Link Between Exercise and Improved Brain Health." FoundMyFitness: BDNF, n.d., https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health.
+13. "What Is Known About the Relationship Between Physical Activity and Cancer Risk." National Cancer Institute: Physical Activity and Cancer, n.d., https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet#what-is-known-about-the-relationship-between-physical-activity-and-cancer-risk.
+14. "Brief Summary of Findings on the Association Between Physical Inactivity and Severe COVID-19 Outcomes." Centers for Disease Control and Prevention, n.d., PDF file, https://www.cdc.gov/coronavirus/2019-ncov/downloads/Brief-Summary-of-Findings-on-the-Association-Between-Physical-Inactivity-and-Severe-COVID-19-Outcomes.pdf.
+15. Webber BJ, Yun HC, Whitfield GP Leisure-time physical activity and mortality from influenza and pneumonia: a cohort study of 577 909 US adults British Journal of Sports Medicine 2023;57:1231-1237.
+16. Volpi E. Is leucine content in dietary protein the key to muscle preservation in older women? Am J Clin Nutr. 2018 Feb 1;107(2):143-144. doi: 10.1093/ajcn/nqy009. PMID: 29529164; PMCID: PMC6248570.
