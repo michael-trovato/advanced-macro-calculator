@@ -61,12 +61,12 @@ Implementing hard stops ensures
 your health is not compromised due to excessively quick weight change or extremely low caloric intake. 
 
 ### Weight Loss Measures
-- Maximum weekly weight loss: 2 lbs (0.907 kg)
-- Lowest daily caloric intake: 20% below the Basal Metabolic Rate (BMR)
+- **Maximum Weekly Weight Loss:** 2 lbs (0.907 kg)
+- **Lowest Daily Caloric Intake:** 80% Basal Metabolic Rate (BMR)
 
 ### Weight Gain Measures
-- Maximum weekly weight gain: 2 lbs (0.907 kg)
-- Recommended weekly weight gain: Between 0.25 lbs (0.113 kg) and 0.5 lbs (0.226 kg) to minimize fat gain
+- **Maximum Weekly Weight Gain:** 2 lbs (0.907 kg)
+- **Recommended Weekly Weight Gain:** 0.25 lbs (0.113 kg) and 0.5 lbs (0.226 kg)
 
 ### Understanding Dietary Fat Requirements for Optimal Health
 To maintain good health and proper bodily functions, it's crucial to consume a minimum amount of fat every day.
