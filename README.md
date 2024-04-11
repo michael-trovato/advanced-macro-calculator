@@ -136,7 +136,7 @@ The calculator meticulously ensures that your optimal protein and fat goals are 
 3. **Blend of Carbohydrates & Fats:** Distribute remaining calories evenly between carbohydrates and fats.
 4. **Blend of Fat & Protein:** Split remaining calories evenly between fats and proteins.
 5. **Blend of Carbohydrates & Protein:** Evenly divide remaining calories between carbohydrates and proteins.
-6. **Well-Balanced Diet:** Distribute remaining calories amongst carbohydrates, fats, and proteins equally.
+6. **Blend of Carbohydrates, Fats, & Protein:** Distribute remaining calories amongst carbohydrates, fats, and proteins equally.
 
 The distribution in mixed categories is done considering the caloric value per gram of each macro.
 
@@ -171,6 +171,8 @@ Moving beyond **2.2 g/kg<sub>LBM</sub>/day** during a calorie deficit has severa
 
 1. Increased Satiety
 2. Increased Caloric Expenditure (TEF)
+
+The maximum allowed intake of protein is set at **4.4 g/kg<sub>LBM</sub>/day**.
 
 ###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
 
@@ -274,6 +276,7 @@ The following doctors have contributed greatly to my understanding of nutritiona
 ## Constants
 
 - **Minimum Protein Intake:** [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
+- **Maximum Protein Intake:** [4.4 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/24834017/)
 - **Minimum Total Fat Grams:** 0.75 g/kg<sub>LBM</sub>/day
 - **Minimum Saturated Fat Grams:** 0.15 g/kg<sub>LBM</sub>/day
 - **Minimum Fat Grams Safety Factor:** 10%

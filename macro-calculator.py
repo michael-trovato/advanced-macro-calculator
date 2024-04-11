@@ -9,6 +9,7 @@ MAX_KG_LOSS_PER_WEEK = -0.907185  # -2 lbs
 MAX_KG_GAIN_PER_WEEK = 0.907185  # 2 lbs
 MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
+MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG = 4.4
 GRAM_SATURATED_FAT_LEAN_BODY_MASS_KG = 0.15
 MIN_FAT_G_LBM_KG = 0.75
 MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.1
@@ -295,6 +296,22 @@ def get_user_input():
     return tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units, sex, age
 
 
+def calculate_protein(lean_body_mass, extra_calories, split):
+    remaining_calories = 0
+
+    protein_grams_per_kg_to_reach_limit = MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG - GRAM_PROTEIN_LEAN_BODY_MASS_KG
+    protein_grams_to_limit = protein_grams_per_kg_to_reach_limit * lean_body_mass
+    protein_calories_to_limit = protein_grams_to_limit * CALORIES_PER_G_PROTEIN
+
+    calories_per_macro = extra_calories / split
+    if calories_per_macro > protein_calories_to_limit:
+        protein_calories_to_add = protein_calories_to_limit
+        remaining_calories = calories_per_macro - protein_calories_to_limit
+    else:
+        protein_calories_to_add = calories_per_macro
+
+    return protein_calories_to_add, remaining_calories, calories_per_macro
+
 def calculate_macros(tdee, extra, change, change_units, weight, weight_units, body_fat_percentage, height, height_units,
                      sex, age):
     # Convert to kg
@@ -358,16 +375,27 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         carb_grams = math.ceil(extra_calories / 2 / CALORIES_PER_G_CARB)
         fat_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_FAT)
     elif extra == 4:  # Mix Fat & Protein
+        protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
+                                                                                            extra_calories, 2)
+
         carb_grams = 0
-        fat_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_FAT)
-        protein_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
+        fat_grams += math.ceil((remaining_calories + calories_per_macro) / CALORIES_PER_G_FAT)
+        protein_grams += math.ceil(protein_calories_to_add / CALORIES_PER_G_PROTEIN)
     elif extra == 5:  # Mix Carbs & Protein
-        carb_grams = math.ceil(extra_calories / 2 / CALORIES_PER_G_CARB)
-        protein_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_PROTEIN)
+        protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
+                                                                                            extra_calories, 2)
+
+        carb_grams = math.ceil((remaining_calories + calories_per_macro) / CALORIES_PER_G_CARB)
+        protein_grams += math.ceil(protein_calories_to_add / CALORIES_PER_G_PROTEIN)
     elif extra == 6:  # Mix Carbs, Fat, & Protein
-        carb_grams = math.ceil(extra_calories / 3 / CALORIES_PER_G_CARB)
-        fat_grams += math.ceil(extra_calories / 3 / CALORIES_PER_G_FAT)
-        protein_grams += math.ceil(extra_calories / 3 / CALORIES_PER_G_PROTEIN)
+        protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
+                                                                                            extra_calories, 3)
+
+        additional_macro_calories = calories_per_macro + (remaining_calories / 2)
+
+        carb_grams = math.ceil(additional_macro_calories / CALORIES_PER_G_CARB)
+        fat_grams += math.ceil(additional_macro_calories / CALORIES_PER_G_FAT)
+        protein_grams += math.ceil(protein_calories_to_add / CALORIES_PER_G_PROTEIN)
 
     protein_calories = int(protein_grams * CALORIES_PER_G_PROTEIN)
     fat_calories = int(fat_grams * CALORIES_PER_G_FAT)
