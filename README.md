@@ -209,14 +209,14 @@ higher caloric density foods will help you to consume more calories for easier w
 - Sauteed Vegetables
 - Whole Grains
 
-### Waist to Height Ratio
+### Waist-to-Height Ratio
 
 One of the cheapest and yet powerful methods
 of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en.wikipedia.org/wiki/Waist-to-height_ratio).
 
 Measure your waist circumference around the naval, then divide that number by your height (in the same units).
 
-Your WHtR should be less than 0.5 for optimal health.
+Your WHtR should be less than 0.5 for optimal health.[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157748/)
 
 #### Boundary Values
 - 0.4–0.49: Healthy
