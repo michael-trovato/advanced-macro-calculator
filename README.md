@@ -57,7 +57,7 @@ to determine body fat percentage.
 Note that your neck circumference will have a large impact on the results.
 
 ## Safety Thresholds for Weight Change
-Implementing hard stops ensures
+Implementing safety thresholds ensures
 your health is not compromised due to excessively quick weight change or extremely low caloric intake. 
 
 ### Weight Loss Measures
@@ -83,7 +83,7 @@ Below are the daily requirements of essential fatty acids:
 
 - **Omega-3 DHA & EPA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.[[1]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[2]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)
 
-- **Linoleic Acid:** The recommended intake is between 11 to 17 grams per day.[[1]](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+- **Linoleic Acid:** The recommended intake is between 11 and 17 grams per day.[[1]](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
 
 ##### Omega-3 EPA & DHA
 
