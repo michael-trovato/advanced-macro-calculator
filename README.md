@@ -87,15 +87,16 @@ Below are the daily requirements of essential fatty acids:
 
 ##### Omega-3 EPA & DHA
 
-This calculator uses DHA & EPA even though alpha-linolenic acid is considered the essential omega-3 fatty acid.
-This is due to inconsistencies in the conversion of ALA to EPA & DHA at the individual level.
+This calculator specifically measures **EPA & DHA**, which are crucial types of Omega-3,
+despite **alpha-linolenic acid** also being recognized as an essential Omega-3 fatty acid.
+The reason for this lies in the observed inconsistencies within the individuals'
+processes that convert ALA into EPA & DHA.<sup>[[1]](https://pubs.rsc.org/en/content/articlelanding/2018/FO/C7FO01809F)
 
-Individuals with the [APOE-4](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease) SNP should prioritize Omega-3 intake from fish.
+There's a note of particular importance to those with the [APOE-4](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease) SNP.
+It's suggested they place a higher precedence on the intake of Omega-3 from fish.
 
-Research has shown that an
-[Omega-3 Index of 8–11%](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake) provides the greatest benefits.
-
-Consistently incorporating these essential fatty acids into your diet will contribute significantly to maintaining your overall health.
+Studies prove that maintaining an [**Omega-3 Index of 8–11%**](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake) yields the greatest health benefits.
+The consistent inclusion of these essential fatty acids in your diet plays a pivotal role in preserving the state of your overall health.
 
 #### Minimum Dietary Fat
 
