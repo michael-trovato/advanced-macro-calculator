@@ -172,7 +172,11 @@ Moving beyond **2.2 g/kg<sub>LBM</sub>/day** during a calorie deficit has severa
 1. Increased Satiety
 2. Increased Caloric Expenditure (TEF)
 
-The maximum allowed intake of protein is set at **3 g/kg<sub>LBM</sub>/day**.
+The maximum allowed intake of protein is set at **3.0 g/kg<sub>LBM</sub>/day**
+as protein intakes higher than this is unlikely to improve satiety.
+
+[Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/) has shown
+that a protein intake of 4.4 g/kg<sub>LBM</sub>/day appears to be safe in healthy resistance-trained individuals.
 
 ###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
 
@@ -276,7 +280,7 @@ The following doctors have contributed greatly to my understanding of nutritiona
 ## Constants
 
 - **Minimum Protein Intake:** [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
-- **Maximum Protein Intake:** 3 g/kg<sub>LBM</sub>/day
+- **Maximum Protein Intake:** 3.0 g/kg<sub>LBM</sub>/day
 - **Minimum Total Fat Grams:** 0.75 g/kg<sub>LBM</sub>/day
 - **Minimum Saturated Fat Grams:** 0.15 g/kg<sub>LBM</sub>/day
 - **Minimum Fat Grams Safety Factor:** 10%
