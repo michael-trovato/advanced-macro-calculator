@@ -71,7 +71,7 @@ def parse_input(user_input, available_units):
 
     # Define the regex pattern to match numbers and units
     units = '|'.join(available_units)
-    pattern = r"([-]?\d+\.?\d*)\s*(" + units + ")"
+    pattern = r"([-]?\d*\.?\d+)\s*(" + units + ")"
 
     # Search for matches in the user input
     match = re.search(pattern, user_input)
