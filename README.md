@@ -182,7 +182,7 @@ However, it's advisable to cap protein intake at **3.0 g/kg<sub>LBM</sub>/day**.
 
 According to published studies, healthy resistance-trained individuals can safely consume up to **4.4 g/kg<sub>LBM</sub>/day** of protein.<sup>[[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/)</sup>
 
-###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
+##### TEF Breakdown<sup>[[17]](https://pubmed.ncbi.nlm.nih.gov/8878356/)</sup>
 
 - **Protein:** 20–30%
 - **Carbs:** 5–10%
@@ -330,3 +330,4 @@ ingested whey protein. Physiol. Rep. 2016, 4, e12893
 14. "Brief Summary of Findings on the Association Between Physical Inactivity and Severe COVID-19 Outcomes." Centers for Disease Control and Prevention, n.d., PDF file, https://www.cdc.gov/coronavirus/2019-ncov/downloads/Brief-Summary-of-Findings-on-the-Association-Between-Physical-Inactivity-and-Severe-COVID-19-Outcomes.pdf.
 15. Webber BJ, Yun HC, Whitfield GP Leisure-time physical activity and mortality from influenza and pneumonia: a cohort study of 577 909 US adults British Journal of Sports Medicine 2023;57:1231-1237.
 16. Volpi E. Is leucine content in dietary protein the key to muscle preservation in older women? Am J Clin Nutr. 2018 Feb 1;107(2):143-144. doi: 10.1093/ajcn/nqy009. PMID: 29529164; PMCID: PMC6248570.
+17. Tappy L. Thermic effect of food and sympathetic nervous system activity in humans. Reprod Nutr Dev. 1996;36(4):391-7. doi: 10.1051/rnd:19960405. PMID: 8878356.
