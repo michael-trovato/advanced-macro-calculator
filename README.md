@@ -92,8 +92,8 @@ despite **alpha-linolenic acid** also being recognized as an essential Omega-3 f
 The reason for this lies in the observed inconsistencies within the individuals'
 processes that convert ALA into EPA & DHA.<sup>[[5]](https://pubs.rsc.org/en/content/articlelanding/2018/FO/C7FO01809F)
 
-There's a note of particular importance to those with the [APOE-4](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease) SNP.
-It's suggested they place a higher precedence on the intake of Omega-3 from fish.
+There's a note of particular importance to those with the **APOE-4** SNP.
+It's suggested they place a higher precedence on the intake of Omega-3 from fish.<sup>[[2]](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease)</sup>
 
 Studies prove that maintaining an **Omega-3 Index of 8–11%** yields the greatest health benefits.<sup>[[2]](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake)</sup>
 The consistent inclusion of these essential fatty acids in your diet plays a pivotal role in preserving the state of your overall health.
