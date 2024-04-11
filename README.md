@@ -29,7 +29,7 @@ and entering your body fat percentage.
 
 An accurate body fat percentage will ensure a proper protein target per day as it is calculated based on lean body mass.
 
-The default protein target is set to **2.2 g/kg<sub>LBM</sub>/day**<sup>[[1]](https://pubmed.ncbi.nlm.nih.gov/28698222/)</sup>.
+The default protein target is set to **2.2 g/kg<sub>LBM</sub>/day**.<sup>[[1]](https://pubmed.ncbi.nlm.nih.gov/28698222/)</sup>
 
 ### Known Body Fat Percentage
 If you know your body fat percentage through reliable testing methods,
@@ -54,7 +54,7 @@ and choose the body fat percentage that is closest to you.
 The [US Navy Body Fat Calculator](https://www.calculator.net/body-fat-calculator.html) is used by the US Navy
 to determine body fat percentage.
 
-Note that your neck circumference will have a large impact on the results.
+Note, neck circumference will have a large impact on the results.
 
 ## Safety Thresholds for Weight Change
 Implementing safety thresholds ensures
@@ -159,7 +159,7 @@ Nonetheless, at a practical level, consuming two to four meals per day is accept
 - **Pay attention to the first and last meals:** The first and last meals of the day play a vital role in providing the body with enough amino acids to prevent catabolism (the breakdown of muscle tissue).
 It's particularly important to ensure adequate protein intake after resistance training sessions.
 
-- **Optimal protein quantity for MPS stimulation:** Research suggests that an intake of 20–40 grams<sup>[[6]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[7]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup> of protein can optimally stimulate MPS.
+- **Optimal protein quantity for MPS stimulation:** Research suggests that an intake of 20–40 grams of protein can optimally stimulate MPS.<sup>[[6]](https://physoc.onlinelibrary.wiley.com/doi/10.14814/phy2.12893)</sup> <sup>[[7]](https://pubmed.ncbi.nlm.nih.gov/33300582/)</sup>
 This will depend on the leucine content of the protein.<sup>[[16]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6248570/)
 
 Remember, every individual's dietary needs and responses can vary. Always consult with a healthcare professional before making significant changes to your diet.
