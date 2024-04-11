@@ -81,7 +81,7 @@ to prevent deficiencies and related health issues.
 
 Below are the daily requirements of essential fatty acids:
 
-- **Omega-3 DHA & EPA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.[[1]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[2]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)
+- **Omega-3 EPA & DHA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.[[1]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[2]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)
 
 - **Linoleic Acid:** The recommended intake is between 11 and 17 grams per day.[[1]](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
 
