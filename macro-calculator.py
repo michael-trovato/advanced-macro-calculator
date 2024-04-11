@@ -9,15 +9,15 @@ MAX_KG_LOSS_PER_WEEK = -0.907185  # -2 lbs
 MAX_KG_GAIN_PER_WEEK = 0.907185  # 2 lbs
 MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
-MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG = 4.4
+MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG = 3
 GRAM_SATURATED_FAT_LEAN_BODY_MASS_KG = 0.15
 MIN_FAT_G_LBM_KG = 0.75
 MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.1
 OMEGA3_INTAKE_RANGE = (2, 6)  # Grams
 LINOLEIC_ACID_AI_AGE_THRESHOLD = 50  # Years
 LINOLEIC_ACID_AI = {
-    'm': [17, 14],
-    'f': [12, 11]
+    'm': (17, 14),
+    'f': (12, 11),
 }
 LBM_POP_DIST = (34, 72)  # 75-159 lbs
 
@@ -92,6 +92,8 @@ def calculate_fatty_acids(sex, age, lean_body_mass):
 
     if omega3 < OMEGA3_INTAKE_RANGE[0]:
         omega3 = OMEGA3_INTAKE_RANGE[0]
+    elif omega3 > OMEGA3_INTAKE_RANGE[1]:
+        omega3 = OMEGA3_INTAKE_RANGE[1]
 
     if age < LINOLEIC_ACID_AI_AGE_THRESHOLD:
         linoleic_acid = LINOLEIC_ACID_AI[sex][0]
@@ -124,6 +126,8 @@ def print_results(macros, lbm, bfp, bmr, warn):
     print(
         f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
     print(
+        f"   Fat Percentage: {macros['fat']['total']['calories'] / total_calories * 100:.2f}%")
+    print(
         f"   Omega-3 EPA & DHA:\n      Amount: {macros['fat']['omega3']['grams']:.2f}g\n      Calories: {macros['fat']['omega3']['calories']} kcal")
     print(
         f"   Linoleic Acid:\n      Amount: {macros['fat']['linoleic_acid']['grams']}g\n      Calories: {macros['fat']['linoleic_acid']['calories']} kcal")
@@ -131,6 +135,8 @@ def print_results(macros, lbm, bfp, bmr, warn):
         f"   Saturated Fat:\n      Amount: {macros['fat']['saturated_fat']['grams']}g\n      Calories: {macros['fat']['saturated_fat']['calories']} kcal\n")
     print(
         f"3. Carbs:\n   Amount: {macros['carb']['grams']}g\n   Calories from Carbs: {macros['carb']['calories']} kcal")
+    print(
+        f"   Carb Percentage: {macros['carb']['calories'] / total_calories * 100:.2f}%")
 
     print(f"\nDaily Caloric Intake: {total_calories:,} kcal")
     print(f"Daily Caloric Change: {caloric_change:,} kcal")
@@ -265,12 +271,12 @@ def get_user_input():
     while True:
         print()
         print('How would you like to distribute remaining calories?\n'
-              '(1) All Carbs\n'
-              '(2) All Fat\n'
-              '(3) Mix Carbs & Fat\n'
-              '(4) Mix Fat & Protein\n'
-              '(5) Mix Carbs & Protein\n'
-              '(6) Mix Carbs, Fat & Protein')
+              '(1) [Recommended for Weight Gain] All Carbs\n'
+              '(2) [Recommended for Weight Gain] All Fat\n'
+              '(3) [Recommended for Weight Gain] Mix Carbs & Fat\n'
+              '(4) [Recommended for Weight Loss] Mix Fat & Protein\n'
+              '(5) [Recommended for Weight Loss] Mix Carbs & Protein\n'
+              '(6) [Recommended for Weight Loss] Mix Carbs, Fat & Protein')
         try:
             extra = int(input('> '))
         except ValueError:
