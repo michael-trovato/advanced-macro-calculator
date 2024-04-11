@@ -67,6 +67,8 @@ def bmi_to_bfp(bmi, sex, age):
 
 
 def parse_input(user_input, available_units):
+    user_input = user_input.lower()
+
     # Define the regex pattern to match numbers and units
     units = '|'.join(available_units)
     pattern = r"([-]?\d+\.?\d*)\s*(" + units + ")"
