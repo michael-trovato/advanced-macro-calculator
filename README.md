@@ -241,17 +241,25 @@ Waist: 40 inches
 - **Volume:** The volume of training (total number of sets and repetitions) is important for muscle growth and should be adjusted according to individual factors such as training experience, muscle mass, and recovery capacity.
 Typically, more experienced lifters might need a higher volume to continue making gains due to adaptations in muscle endurance and strength.
 
+**Benefits:**
+
+- Increased Hypertrophy
+- Strengthened Muscles & Bones
+- Fall Prevention<sup>[[1]](https://www.cdc.gov/falls/facts.html)</sup>
+- Increased BMR<sup>[[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3661116/)</sup>
+
 #### Cardiovascular Training
 
 Not only great to increase total daily energy expenditure,
 cardio has been linked to [increased life span](https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm).
 
-Benefits include:
+**Benefits:**
 - Increased VO2 max
-- [Increased BDNF](https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health)
+- Increased BDNF<sup>[[1]](https://www.foundmyfitness.com/topics/bdnf#bdnf-provides-a-possible-link-between-exercise-and-improved-brain-health)</sup>
 - Lower Risk of Cardiovascular Disease
-- Lower Risk of Certain Cancers
-- Improved Outcomes with Infectious Diseases
+- Lower Risk of Certain Cancers<sup>[[1]](https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet#what-is-known-about-the-relationship-between-physical-activity-and-cancer-risk)</sup>
+- Improved Outcomes with Infectious Diseases<sup>[[1]](https://www.cdc.gov/coronavirus/2019-ncov/downloads/Brief-Summary-of-Findings-on-the-Association-Between-Physical-Inactivity-and-Severe-COVID-19-Outcomes.pdf)</sup>
+<sup>[[2]](https://bjsm.bmj.com/content/57/19/1231)</sup>
 
 ### Lab Tests
 
