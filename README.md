@@ -165,18 +165,17 @@ To optimize your diet for weight loss, choose foods with high satiety per calori
 Ideally, aim for lean protein-rich options that also contain good fats.
 Remember to meet your daily protein and fat targets!
 
-##### Protein Intake
+##### Protein Intake Optimization
 
-Moving beyond **2.2 g/kg<sub>LBM</sub>/day** during a calorie deficit has several advantages:
+Raising protein intake beyond **2.2 g/kg<sub>LBM</sub>/day** while maintaining a calorie deficit may provide several benefits such as:
 
-1. Increased Satiety
-2. Increased Caloric Expenditure (TEF)
+1. Enhanced Satiety
 
-The maximum allowed intake of protein is set at **3.0 g/kg<sub>LBM</sub>/day**
-as protein intakes higher than this is unlikely to improve satiety.
+2. Greater Caloric Expenditure through Thermic Effect of Food (TEF)
 
-[Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/) has shown
-that a protein intake of 4.4 g/kg<sub>LBM</sub>/day appears to be safe in healthy resistance-trained individuals.
+However, it's advisable to cap protein intake at **3.0 g/kg<sub>LBM</sub>/day**. Consuming protein beyond this limit is unlikely to offer further improvements in satiety. 
+
+According to [published studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/), healthy resistance-trained individuals can safely consume up to **4.4 g/kg<sub>LBM</sub>/day** of protein.
 
 ###### [TEF Breakdown](https://pubmed.ncbi.nlm.nih.gov/8878356/)
 
