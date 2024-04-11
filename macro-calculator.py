@@ -9,9 +9,10 @@ MAX_KG_LOSS_PER_WEEK = -0.907185  # -2 lbs
 MAX_KG_GAIN_PER_WEEK = 0.907185  # 2 lbs
 MAX_PERCENTAGE_BELOW_BMR = 0.2
 GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
+GRAM_SATURATED_FAT_LEAN_BODY_MASS_KG = 0.15
 MIN_FAT_G_LBM_KG = 0.75
-MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.2
-OMEGA3_INTAKE_RANGE = (1.75, 2.5)  # Grams
+MIN_FAT_SAFETY_FACTOR_PERCENTAGE = 0.1
+OMEGA3_INTAKE_RANGE = (2, 6)  # Grams
 LINOLEIC_ACID_AI_AGE_THRESHOLD = 50  # Years
 LINOLEIC_ACID_AI = {
     'm': [17, 14],
@@ -94,12 +95,15 @@ def calculate_fatty_acids(sex, age, lean_body_mass):
     else:
         linoleic_acid = LINOLEIC_ACID_AI[sex][1]
 
+    saturated_fat = math.ceil(lean_body_mass * GRAM_SATURATED_FAT_LEAN_BODY_MASS_KG)
+
     total = math.ceil(lean_body_mass * MIN_FAT_G_LBM_KG * (1 + MIN_FAT_SAFETY_FACTOR_PERCENTAGE))
+    total_essential = omega3 + linoleic_acid + saturated_fat
 
-    if total < omega3 + linoleic_acid:
-        total = omega3 + linoleic_acid
+    if total < total_essential:
+        total = total_essential
 
-    return total, omega3, linoleic_acid
+    return total, omega3, linoleic_acid, saturated_fat
 
 
 def print_results(macros, lbm, bfp, bmr, warn):
@@ -117,9 +121,11 @@ def print_results(macros, lbm, bfp, bmr, warn):
     print(
         f"2. Fat: \n   Total Fat: {macros['fat']['total']['grams']:.0f}g\n   Calories from Fat: {macros['fat']['total']['calories']} kcal")
     print(
-        f"   Omega 3 DHA & EPA:\n      Amount: {macros['fat']['omega3']['grams']:.2f}g\n      Calories: {macros['fat']['omega3']['calories']} kcal")
+        f"   Omega-3 EPA & DHA:\n      Amount: {macros['fat']['omega3']['grams']:.2f}g\n      Calories: {macros['fat']['omega3']['calories']} kcal")
     print(
-        f"   Linoleic Acid:\n      Amount: {macros['fat']['linoleic_acid']['grams']}g\n      Calories: {macros['fat']['linoleic_acid']['calories']} kcal\n")
+        f"   Linoleic Acid:\n      Amount: {macros['fat']['linoleic_acid']['grams']}g\n      Calories: {macros['fat']['linoleic_acid']['calories']} kcal")
+    print(
+        f"   Saturated Fat:\n      Amount: {macros['fat']['saturated_fat']['grams']}g\n      Calories: {macros['fat']['saturated_fat']['calories']} kcal\n")
     print(
         f"3. Carbs:\n   Amount: {macros['carb']['grams']}g\n   Calories from Carbs: {macros['carb']['calories']} kcal")
 
@@ -306,7 +312,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
         lean_body_mass = weight * (1 - body_fat_percentage / 100)
 
     protein_grams = math.ceil(lean_body_mass * GRAM_PROTEIN_LEAN_BODY_MASS_KG)  # Set Minimum Protein
-    fat_grams, omega3_grams, linoleic_acid_grams = calculate_fatty_acids(sex, age, lean_body_mass)
+    fat_grams, omega3_grams, linoleic_acid_grams, saturated_fat_grams = calculate_fatty_acids(sex, age, lean_body_mass)
 
     protein_calories = protein_grams * CALORIES_PER_G_PROTEIN
     fat_calories = fat_grams * CALORIES_PER_G_FAT
@@ -365,6 +371,7 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     fat_calories = int(fat_grams * CALORIES_PER_G_FAT)
     omega3_calories = int(omega3_grams * CALORIES_PER_G_FAT)
     linoleic_acid_calories = int(linoleic_acid_grams * CALORIES_PER_G_FAT)
+    saturated_fat_calories = int(saturated_fat_grams * CALORIES_PER_G_FAT)
     carb_calories = int(carb_grams * CALORIES_PER_G_CARB)
 
     macros = {
@@ -384,6 +391,10 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
             'linoleic_acid': {
                 'grams': linoleic_acid_grams,
                 'calories': linoleic_acid_calories,
+            },
+            'saturated_fat': {
+                'grams': saturated_fat_grams,
+                'calories': saturated_fat_calories,
             }
         },
         'carb': {

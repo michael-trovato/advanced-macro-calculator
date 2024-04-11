@@ -1,15 +1,21 @@
 # Advanced Macro Calculator
-This calculator helps you optimize your nutritional intake and weight management strategies.
+This calculator helps
+you optimize your nutritional intake and body composition by recommending targeted macros and calories tailored to you.
+
+With the tool being diet agnostic, it fits into any individual's diet preference.
+
 It is built on reliable scientific evidence and provides you with personalized advice based on your specific input.
-To use this calculator, any recent version of [Python 3](https://www.python.org/downloads/) should work.
+
+This calculator requires [Python 3](https://www.python.org/downloads/) to run.
 
 ### Prompts
 
 Please answer the prompts with the required information.
 
-The calculator fully supports imperial and metric units.
+This calculator fully supports imperial and metric units.
 
 Users can choose to lose or gain weight based on percentage of body weight or fixed values (lbs or kg).
+
 This is useful when wanting to lose as a percentage of body weight per week while in a fat loss phase,
 and gaining at a fixed value (lbs or kg) during a muscle gain phase.
 
@@ -63,18 +69,62 @@ your health is not compromised due to excessively quick weight change or extreme
 - Recommended weekly weight gain: Between 0.25 lbs (0.113 kg) and 0.5 lbs (0.226 kg) to minimize fat gain
 
 ### Understanding Dietary Fat Requirements for Optimal Health
-To maintain good health and proper bodily functions, it's crucial to consume a minimum amount of fat every day. However, the scientific consensus regarding the precise amount required is yet to be reached. Thus, an estimated value with a 20% safety margin is commonly considered to ensure an adequate fat intake. 
-
-One key aspect of dietary fats is to maintain the required level of essential fatty acids in our bodies to prevent deficiencies and related health issues. 
+To maintain good health and proper bodily functions, it's crucial to consume a minimum amount of fat every day.
+However, the scientific consensus regarding the precise amount required is yet to be reached.
+Thus, an estimated value with a 10% safety margin is used to ensure an adequate fat intake.
 
 #### Essential Fatty Acids: The Daily Requirement
+
+One key aspect of dietary fats is
+to maintain the required level of essential fatty acids in our bodies
+to prevent deficiencies and related health issues. 
+
 Below are the daily requirements of essential fatty acids:
 
-- [Omega 3 DHA & EPA: Ideally, an adult should consume between 1.75 to 2.5 grams per day for optimal health.](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults)
+- **Omega-3 DHA & EPA:** Ideally, an adult should consume between 2 and 6 grams per day for optimal health.[[1]](https://www.foundmyfitness.com/topics/omega-3#optimal-omega-3-intake-for-most-adults) [[2]](https://biolayne.com/articles/nutrition/fat-facts-fat-source-matters/)
 
-- [Linoleic Acid: The recommended intake is between 11 to 17 grams per day.](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+- **Linoleic Acid:** The recommended intake is between 11 to 17 grams per day.[[1]](https://en.wikipedia.org/wiki/Essential_fatty_acid#Reference_intake_values)
+
+##### Omega-3 EPA & DHA
+
+This calculator uses DHA & EPA even though alpha-linolenic acid is considered the essential omega-3 fatty acid.
+This is due to inconsistencies in the conversion of ALA to EPA & DHA at the individual level.
+
+Individuals with the [APOE-4](https://www.foundmyfitness.com/topics/omega-3#apoe-4-and-alzheimer-39-s-disease) SNP should prioritize Omega-3 intake from fish.
+
+Research has shown that an
+[Omega-3 Index of 8–11%](https://www.foundmyfitness.com/topics/omega-3#long-term-measure-of-omega-3-intake) provides the greatest benefits.
 
 Consistently incorporating these essential fatty acids into your diet will contribute significantly to maintaining your overall health.
+
+#### Minimum Dietary Fat
+
+To ensure that optimal hormonal health is maintained,
+the minimum dietary fat intake is set at **0.75 g/kg<sub>LBM</sub>/day**.
+This guideline is informed by scientific research and navigates the shortcomings
+associated with the more traditional methods of calculating fat intake: *percentage of total daily calories* and *percentage of total body weight*.
+
+- **Percentage of Total Daily Calories**:
+While this method is widely used, it can inadvertently underestimate the necessary fat intake during periods of caloric deficit,
+potentially compromising hormonal balance and overall health.
+
+- **Percentage of Total Body Weight**:
+This approach might lead to an overestimation of fat needs for individuals with a higher body fat percentage.
+It fails to account for the fact that adipose tissue does not directly increase dietary fat requirements
+for maintaining essential physiological functions, including hormonal health.
+
+The approach of focusing on **lean body mass (LBM)**, offers a more individualized strategy.
+It ensures that all individuals, regardless of their total body weight or caloric intake,
+receive a foundational amount of dietary fat essential for hormone production and other critical bodily functions.
+This method acknowledges that while body composition varies greatly among individuals,
+the fundamental need for dietary fats to support health and well-being does not.
+
+##### Saturated Fat
+
+While saturated fat is not considered essential,
+consuming some saturated fat per day is known to enhance hormonal health.
+
+The default minimum recommended intake of saturated fat is set to **0.15 g/kg<sub>LBM</sub>/day**.
 
 ## Managing your Caloric Intake
 The calculator meticulously ensures that your optimal protein and fat goals are met according to your dietary needs. Given the remaining calories, you could customize your macro targets. This flexibility comes in handy when you want to modulate the macros according to your specific dietary regime.
@@ -110,13 +160,13 @@ Remember, every individual's dietary needs and responses can vary. Always consul
 
 #### Weight Loss
 
-To shed some pounds, choose foods with high satiety per calorie.
-Ideally, aim for protein-rich options that also contain good fats.
+To optimize your diet for weight loss, choose foods with high satiety per calorie, lower caloric density.
+Ideally, aim for lean protein-rich options that also contain good fats.
 Remember to meet your daily protein and fat targets!
 
 ##### Protein Intake
 
-Moving beyond **2.2 g/kg<sub>lbm</sub>/day** during a calorie deficit has several advantages:
+Moving beyond **2.2 g/kg<sub>LBM</sub>/day** during a calorie deficit has several advantages:
 
 1. Increased Satiety
 2. Increased Caloric Expenditure (TEF)
@@ -127,7 +177,7 @@ Moving beyond **2.2 g/kg<sub>lbm</sub>/day** during a calorie deficit has severa
 - **Carbs:** 5–10%
 - **Fat:** 0–3%
 
-##### Examples
+##### Examples (Non-Exhaustive)
 - Lean Meats
   - 93% Ground Beef
   - Turkey
@@ -144,9 +194,10 @@ Moving beyond **2.2 g/kg<sub>lbm</sub>/day** during a calorie deficit has severa
 
 #### Weight Gain
 
-Targeting a lower satiety per calorie will help you to consume more calories for weight gain.
+Targeting a lower satiety per calorie,
+higher caloric density foods will help you to consume more calories for easier weight gain.
 
-##### Examples
+##### Examples (Non-Exhaustive)
 - Fattier Meats
 - Whole Fat Yogurt
 - Sauteed Vegetables
@@ -159,7 +210,7 @@ of determining your health risk is the [Waist-to-height Ratio (WHtR)](https://en
 
 Measure your waist circumference around the naval, then divide that number by your height (in the same units).
 
-Your WHtR should be less than 0.5.
+Your WHtR should be less than 0.5 for optimal health.
 
 #### Boundary Values
 - 0.4–0.49: Healthy
@@ -207,8 +258,8 @@ These are generally recommended lab tests.
 - CBC
 - CMP
 - Fasting Lipids (9–12 Hours)
-- Thyroid
-- Testosterone
+- Thyroid Panel
+- Sex Hormones
 
 ## Special Thanks
 
@@ -221,28 +272,11 @@ The following doctors have contributed greatly to my understanding of nutritiona
 
 ## Constants
 
-- **Minimum Protein Intake:** [2.2 g/kg<sub>lbm</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
-- **Minimum Fat Grams:** 0.75 g/kg<sub>lbm</sub>/day
-- **Minimum Fat Grams Safety Factor:** 20%
+- **Minimum Protein Intake:** [2.2 g/kg<sub>LBM</sub>/day](https://pubmed.ncbi.nlm.nih.gov/28698222/)
+- **Minimum Total Fat Grams:** 0.75 g/kg<sub>LBM</sub>/day
+- **Minimum Saturated Fat Grams:** 0.15 g/kg<sub>LBM</sub>/day
+- **Minimum Fat Grams Safety Factor:** 10%
 - **Maximum Caloric Deficit Below BMR:** 20%
-
-### Minimum Dietary Fat
-
-To ensure our users maintain optimal hormonal health, we've set the minimum dietary fat intake at **0.75 g/kg<sub>lbm</sub>/day**.
-This guideline is informed by scientific research and navigates the shortcomings
-associated with the more traditional methods of calculating fat intake: *percentage of total daily calories* and *percentage of total body weight*.
-
-- **Percentage of Total Daily Calories**:
-While this method is widely used, it can inadvertently underestimate the necessary fat intake during periods of caloric deficit,
-potentially compromising hormonal balance and overall health.
-- **Percentage of Total Body Weight**:
-This approach might lead to an overestimation of fat needs for individuals with a higher body fat percentage.
-It fails to account for the fact that adipose tissue does not directly increase dietary fat requirements
-for maintaining essential physiological functions, including hormonal health.
-
-Our approach, focusing on **lean body mass (LBM)**, offers a more individualized strategy.
-It ensures that all users, regardless of their total body weight or caloric intake, receive a foundational amount of dietary fat essential for hormone production and other critical bodily functions.
-This method acknowledges that while body composition varies greatly among individuals, the fundamental need for dietary fats to support health and well-being does not.
 
 ## Disclaimers
 This calculator is designed to provide general guidance and informational content only.
