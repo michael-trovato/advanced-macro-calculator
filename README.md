@@ -133,12 +133,13 @@ Given the remaining calories, you select your macro targets.
 This flexibility comes in handy when you want to modulate the macros according to your specific dietary regime.
 
 ### Available Options
-1. **Favor Carbohydrates:** Allocate all remaining calories to carbs.
-2. **Favor Fat:** Direct all remaining calories towards fats.
-3. **Blend of Carbohydrates & Fats:** Distribute remaining calories evenly between carbohydrates and fats.
-4. **Blend of Fat & Protein:** Split remaining calories evenly between fats and proteins.
-5. **Blend of Carbohydrates & Protein:** Evenly divide remaining calories between carbohydrates and proteins.
-6. **Blend of Carbohydrates, Fats, & Protein:** Distribute remaining calories amongst carbohydrates, fats, and proteins equally.
+1. **Favor Protein:** Assign all remaining calories towards protein.
+2. **Favor Carbohydrates:** Allocate all remaining calories to carbs.
+3. **Favor Fat:** Direct all remaining calories towards fats.
+4. **Blend of Carbohydrates & Fats:** Distribute remaining calories evenly between carbohydrates and fats.
+5. **Blend of Fat & Protein:** Split remaining calories evenly between fats and proteins.
+6. **Blend of Carbohydrates & Protein:** Evenly divide remaining calories between carbohydrates and proteins.
+7. **Blend of Carbohydrates, Fats, & Protein:** Distribute remaining calories amongst carbohydrates, fats, and proteins equally.
 
 The distribution in mixed categories is done considering the caloric value per gram of each macro.
 

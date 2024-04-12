@@ -271,17 +271,22 @@ def get_user_input():
     while True:
         print()
         print('How would you like to distribute remaining calories?\n'
-              '(1) [Recommended for Weight Gain] All Carbs\n'
-              '(2) [Recommended for Weight Gain] All Fat\n'
-              '(3) [Recommended for Weight Gain] Mix Carbs & Fat\n'
-              '(4) [Recommended for Weight Loss] Mix Fat & Protein\n'
-              '(5) [Recommended for Weight Loss] Mix Carbs & Protein\n'
-              '(6) [Recommended for Weight Loss] Mix Carbs, Fat & Protein')
+              '(1) [Warning: Not Recommended] All Protein (No Limit)\n'
+              '(2) [Recommended for Weight Gain] All Carbs\n'
+              '(3) [Recommended for Weight Gain] All Fat\n'
+              '(4) [Recommended for Weight Gain] Mix Carbs & Fat\n'
+              '(5) [Recommended for Weight Loss] Mix Fat & Protein\n'
+              '(6) [Recommended for Weight Loss] Mix Carbs & Protein\n'
+              '(7) [Recommended for Weight Loss] Mix Carbs, Fat & Protein')
         try:
             extra = int(input('> '))
         except ValueError:
             print()
-            print('Error: Please enter a number 1 through 6.')
+            print('Error: Please enter a number 1 through 7.')
+            continue
+        if not 1 <= extra <= 7:
+            print()
+            print('Error: Please enter a number 1 through 7.')
             continue
         break
 
@@ -371,29 +376,29 @@ def calculate_macros(tdee, extra, change, change_units, weight, weight_units, bo
     if extra_calories < 0:
         extra_calories = 0
 
-    carb_grams = None
-    if extra == 1:  # All Carbs
+    carb_grams = 0
+    if extra == 1:  # All Protein
+        protein_grams += math.ceil(extra_calories / CALORIES_PER_G_PROTEIN)
+    elif extra == 2:  # All Carbs
         carb_grams = math.ceil(extra_calories / CALORIES_PER_G_CARB)
-    elif extra == 2:  # All Fat
-        carb_grams = 0
+    elif extra == 3:  # All Fat
         fat_grams += math.ceil(extra_calories / CALORIES_PER_G_FAT)
-    elif extra == 3:  # Mix Carbs & Fat
+    elif extra == 4:  # Mix Carbs & Fat
         carb_grams = math.ceil(extra_calories / 2 / CALORIES_PER_G_CARB)
         fat_grams += math.ceil(extra_calories / 2 / CALORIES_PER_G_FAT)
-    elif extra == 4:  # Mix Fat & Protein
+    elif extra == 5:  # Mix Fat & Protein
         protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
                                                                                             extra_calories, 2)
 
-        carb_grams = 0
         fat_grams += math.ceil((remaining_calories + calories_per_macro) / CALORIES_PER_G_FAT)
         protein_grams += math.ceil(protein_calories_to_add / CALORIES_PER_G_PROTEIN)
-    elif extra == 5:  # Mix Carbs & Protein
+    elif extra == 6:  # Mix Carbs & Protein
         protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
                                                                                             extra_calories, 2)
 
         carb_grams = math.ceil((remaining_calories + calories_per_macro) / CALORIES_PER_G_CARB)
         protein_grams += math.ceil(protein_calories_to_add / CALORIES_PER_G_PROTEIN)
-    elif extra == 6:  # Mix Carbs, Fat, & Protein
+    elif extra == 7:  # Mix Carbs, Fat, & Protein
         protein_calories_to_add, remaining_calories, calories_per_macro = calculate_protein(lean_body_mass,
                                                                                             extra_calories, 3)
 
