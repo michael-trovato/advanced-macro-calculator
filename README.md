@@ -285,6 +285,7 @@ The following doctors have contributed greatly to my understanding of nutritiona
 
 - Mike Israetel, PhD
 - Theodore (Ted) Naiman, MD
+- Gabrielle Lyon, MD
 - Layne Norton, PhD
 - Rhonda Patrick, PhD
 
