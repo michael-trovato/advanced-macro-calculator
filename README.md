@@ -180,7 +180,8 @@ Raising protein intake beyond **2.2 g/kg<sub>LBM</sub>/day** while maintaining a
 
 However, it's advisable to cap protein intake at **3.0 g/kg<sub>LBM</sub>/day**. Consuming protein beyond this limit is unlikely to offer further improvements in satiety. 
 
-According to published studies, healthy resistance-trained individuals can safely consume up to **4.4 g/kg<sub>LBM</sub>/day** of protein.<sup>[[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/)</sup>
+According to a hypercaloric protein overfeeding study,
+healthy resistance-trained individuals can safely consume up to **4.4 g/kg/day** of protein.<sup>[[7]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022420/)</sup>
 
 ##### TEF Breakdown<sup>[[17]](https://pubmed.ncbi.nlm.nih.gov/8878356/)</sup>
 
