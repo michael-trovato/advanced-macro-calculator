@@ -5,7 +5,7 @@
 
 ## Website
 
-A website version of this calculator is available at [Advanced Macro Calculator](https://advancedmacrocalculator.com/)
+A website version of this calculator is available at [Advanced Macro Calculator](https://advancedmacrocalculator.com/).
 
 ## Description
 
