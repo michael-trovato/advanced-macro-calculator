@@ -1,7 +1,14 @@
-[![PyPI version](https://badge.fury.io/py/advanced-macro-calculator.svg)](https://pypi.org/project/advanced-macro-calculator/)
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # Advanced Macro Calculator
+
+[![PyPI version](https://badge.fury.io/py/advanced-macro-calculator.svg)](https://pypi.org/project/advanced-macro-calculator/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Website
+
+A website version of this calculator is available at [Advanced Macro Calculator](https://advancedmacrocalculator.com/)
+
+## Description
+
 This calculator helps
 you optimize your nutritional intake and body composition by recommending targeted macros and calories tailored to you.
 
