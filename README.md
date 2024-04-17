@@ -8,7 +8,7 @@ It is built on reliable scientific evidence and provides you with personalized a
 
 This calculator requires [Python 3](https://www.python.org/downloads/) to run.
 
-### Prompts
+## Prompts
 
 Please answer the prompts with the required information.
 
