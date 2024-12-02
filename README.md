@@ -18,6 +18,18 @@ It is built on reliable scientific evidence and provides you with personalized a
 
 This calculator requires [Python 3](https://www.python.org/downloads/) to run.
 
+## Installation
+
+```
+pip install advanced-macro-calculator
+```
+
+## Usage
+
+```
+advanced_macro_calculator
+```
+
 ## Prompts
 
 Please answer the prompts with the required information.
@@ -199,6 +211,25 @@ healthy resistance-trained individuals can safely consume up to **4.4 g/kg/day**
 - **Protein:** 20–30%
 - **Carbs:** 5–10%
 - **Fat:** 0–3%
+
+##### Age-related Anabolic Resistance
+
+To account for the effects of age-related anabolic resistance,
+a protein bonus is factored into the daily protein recommendation.
+This adjustment ensures that older individuals receive an optimal protein intake to support muscle protein synthesis (MPS) and maintain muscle health.
+
+**Protein Bonus by Age**:
+
+- Ages 50–65: **+0.01 g/kg<sub>LBM</sub>/day**
+- Ages 65+: **+0.02 g/kg<sub>LBM</sub>/day**
+
+These increments help counteract the reduced efficiency of muscle protein synthesis that occurs with aging.
+
+**Why This Matters**:
+
+As we age, our bodies become less responsive to dietary protein,
+requiring slightly higher intakes to achieve the same anabolic response. Factoring in these age-related adjustments ensures personalized, science-backed recommendations for optimal health.
+
 
 ##### Examples (Non-Exhaustive)
 - Lean Meats
