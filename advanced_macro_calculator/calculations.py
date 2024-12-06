@@ -13,6 +13,8 @@ class AdvancedMacroCalculator:
     MAX_PERCENTAGE_BELOW_BMR = 0.2
     GRAM_PROTEIN_LEAN_BODY_MASS_KG = 2.2
     MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG = 3
+    GRAM_PROTEIN_LEAN_BODY_MASS_KG_SOFT_LIMIT = 3
+    GRAM_PROTEIN_LEAN_BODY_MASS_KG_HARD_LIMIT = 4.4
     GRAM_PROTEIN_FAT_MASS_KG = 0.044
     ANABOLIC_RESISTANCE_FACTOR = {50: 0.01, 65: 0.02}
     GRAM_SATURATED_FAT_LEAN_BODY_MASS_KG = 0.15
@@ -101,8 +103,11 @@ class AdvancedMacroCalculator:
         return total, omega3, linoleic_acid, saturated_fat
 
     @staticmethod
-    def calculate_protein(lean_body_mass, protein_grams, extra_calories, split):
-        protein_grams_upper_limit = lean_body_mass * AdvancedMacroCalculator.MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG
+    def calculate_protein(lean_body_mass, protein_grams, extra_calories, split, soft_limit=True):
+        if soft_limit:
+            protein_grams_upper_limit = lean_body_mass * AdvancedMacroCalculator.GRAM_PROTEIN_LEAN_BODY_MASS_KG_SOFT_LIMIT
+        else:
+            protein_grams_upper_limit = lean_body_mass * AdvancedMacroCalculator.GRAM_PROTEIN_LEAN_BODY_MASS_KG_HARD_LIMIT
         remaining_protein_grams = protein_grams_upper_limit - protein_grams
         protein_calories_to_limit = remaining_protein_grams * AdvancedMacroCalculator.CALORIES_PER_G_PROTEIN
 
@@ -148,7 +153,7 @@ class AdvancedMacroCalculator:
                 break
         protein_grams = math.ceil(protein_grams * age_factor)
 
-        max_allowed_protein = AdvancedMacroCalculator.MAX_GRAM_PROTEIN_LEAN_BODY_MASS_KG * lean_body_mass
+        max_allowed_protein = AdvancedMacroCalculator.GRAM_PROTEIN_LEAN_BODY_MASS_KG_SOFT_LIMIT * lean_body_mass
         protein_grams = protein_grams if protein_grams <= max_allowed_protein else max_allowed_protein
         protein_calories = protein_grams * AdvancedMacroCalculator.CALORIES_PER_G_PROTEIN
 
@@ -190,15 +195,18 @@ class AdvancedMacroCalculator:
 
         carb_grams = 0
         if extra_calories:
-            # All Protein
+            # Favor Protein
             if distribution == 1:
-                protein_grams += math.ceil(extra_calories / AdvancedMacroCalculator.CALORIES_PER_G_PROTEIN)
+                protein_grams, remaining_calories = AdvancedMacroCalculator.calculate_protein(lean_body_mass, protein_grams, extra_calories, 3, soft_limit=False)
+                additional_macro_calories = remaining_calories / 2
+                carb_grams = math.ceil(additional_macro_calories / AdvancedMacroCalculator.CALORIES_PER_G_CARB)
+                fat_grams += math.ceil(additional_macro_calories / AdvancedMacroCalculator.CALORIES_PER_G_FAT)
 
-            # All Carbs
+            # Favor Carbs
             elif distribution == 2:
                 carb_grams = math.ceil(extra_calories / AdvancedMacroCalculator.CALORIES_PER_G_CARB)
 
-            # All Fat
+            # Favor Fat
             elif distribution == 3:
                 fat_grams += math.ceil(extra_calories / AdvancedMacroCalculator.CALORIES_PER_G_FAT)
 
