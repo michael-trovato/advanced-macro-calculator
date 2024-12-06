@@ -333,7 +333,8 @@ The following doctors have contributed greatly to my understanding of nutritiona
 ## Constants
 
 - **Minimum Protein Intake:** 2.2 g/kg<sub>LBM</sub>/day<sup>[[1]](https://pubmed.ncbi.nlm.nih.gov/28698222/)</sup>
-- **Maximum Protein Intake:** 3.0 g/kg<sub>LBM</sub>/day
+- **Soft Limit of Protein Intake:** 3.0 g/kg<sub>LBM</sub>/day
+- **Hard Limit of Protein Intake:** 4.4 g/kg<sub>LBM</sub>/day
 - **Minimum Total Fat Grams:** 0.75 g/kg<sub>LBM</sub>/day
 - **Minimum Saturated Fat Grams:** 0.15 g/kg<sub>LBM</sub>/day
 - **Minimum Fat Grams Safety Factor:** 10%
